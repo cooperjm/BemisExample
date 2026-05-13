@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.toiletseats.com)"
+      "WebFetch(domain:www.toiletseats.com)",
+      "WebFetch(domain:biobidet.com)"
     ]
   }
 }
