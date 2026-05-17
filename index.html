@@ -1,545 +1,896 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bidet Seat Comparison | Bio Bidet</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Bidet Seat Comparison | Bio Bidet</title>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header
+			class="site-header"
+			id="site-header"
+		>
+			<nav class="nav-inner">
+				<a
+					href="/"
+					class="nav-logo"
+				>
+					<img
+						src="biobidet_images/newbiologo_white_5fd1c86d-9ed9-4a33-ad0b-62abd472718f_160x@2x.avif"
+						alt="BioBidet by Bemis"
+					/>
+				</a>
+				<ul class="nav-links">
+					<li><a href="#">Bidet Seats</a></li>
+					<li><a href="#">Bidet Attachments</a></li>
+					<li><a href="#">Bidet Toilets</a></li>
+					<li><a href="#">Resource Hub</a></li>
+					<li><a href="#">More</a></li>
+				</ul>
+				<div class="nav-actions">
+					<a
+						href="#"
+						class="nav-icon"
+						aria-label="Search"
+					>
+						<svg
+							width="18"
+							height="18"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<circle
+								cx="11"
+								cy="11"
+								r="8"
+							></circle>
+							<line
+								x1="21"
+								y1="21"
+								x2="16.65"
+								y2="16.65"
+							></line>
+						</svg>
+					</a>
+					<a
+						href="#"
+						class="nav-icon"
+						aria-label="Cart"
+					>
+						<svg
+							width="18"
+							height="18"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+							<line
+								x1="3"
+								y1="6"
+								x2="21"
+								y2="6"
+							></line>
+							<path d="M16 10a4 4 0 01-8 0"></path>
+						</svg>
+					</a>
+				</div>
+			</nav>
+		</header>
 
-    <!-- HEADER -->
-    <header class="site-header" id="site-header">
-        <nav class="nav-inner">
-            <a href="/" class="nav-logo">
-                <img src="biobidet_images/newbiologo_white_5fd1c86d-9ed9-4a33-ad0b-62abd472718f_160x@2x.avif" alt="BioBidet by Bemis">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#">Bidet Seats</a></li>
-                <li><a href="#">Bidet Attachments</a></li>
-                <li><a href="#">Bidet Toilets</a></li>
-                <li><a href="#">Resource Hub</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="#" class="nav-icon" aria-label="Search">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </a>
-                <a href="#" class="nav-icon" aria-label="Cart">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 01-8 0"></path>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-    </header>
+		<main>
+			<!-- HERO -->
+			<section class="hero">
+				<div class="hero-media">
+					<img
+						src="biobidet_images/hero_web.webp"
+						alt="Bio Bidet"
+						class="hero-img"
+					/>
+					<div class="hero-overlay"></div>
+				</div>
+				<div class="hero-content">
+					<p class="hero-eyebrow">Bio Bidet</p>
+					<h1 class="hero-headline">Water does<br />it better.</h1>
+					<p class="hero-sub">
+						Selecting the perfect Bio Bidet model for your lifestyle is easy.
+					</p>
+					<div class="hero-actions">
+						<a
+							href="#collection"
+							class="btn btn-primary"
+							>Explore the Collection</a
+						>
+						<a
+							href="#compare"
+							class="btn btn-ghost"
+							>Compare Models</a
+						>
+					</div>
+				</div>
+				<div class="hero-scroll">
+					<span>Scroll</span>
+					<div class="scroll-line"></div>
+				</div>
+			</section>
 
-    <main>
+			<!-- COLLECTION INTRO -->
+			<section
+				class="collection-intro"
+				id="collection"
+			>
+				<div class="collection-intro-inner">
+					<p class="eyebrow reveal-fade">Best Selling Bidet Seats</p>
+					<h2 class="section-title reveal-up">
+						Five seats.<br />One standard of clean.
+					</h2>
+					<p class="section-sub reveal-up delay-1">
+						From essential to extraordinary — find the Bio Bidet seat that fits
+						your bathroom, your budget, and your life.
+					</p>
+				</div>
+			</section>
 
-        <!-- HERO -->
-        <section class="hero">
-            <div class="hero-media">
-                <img src="biobidet_images/hero_web.webp" alt="Bio Bidet" class="hero-img">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="hero-content">
-                <p class="hero-eyebrow">Bio Bidet</p>
-                <h1 class="hero-headline">Water does<br>it better.</h1>
-                <p class="hero-sub">Selecting the perfect Bio Bidet model for your lifestyle is easy.</p>
-                <div class="hero-actions">
-                    <a href="#collection" class="btn btn-primary">Explore the Collection</a>
-                    <a href="#compare" class="btn btn-ghost">Compare Models</a>
-                </div>
-            </div>
-            <div class="hero-scroll">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
-            </div>
-        </section>
+			<!-- BB-500 -->
+			<section
+				class="product-section"
+				id="bb-500"
+			>
+				<div class="product-inner">
+					<div class="product-media reveal-right">
+						<img
+							src="biobidet_images/bb-500-lifestyle_web.webp"
+							alt="BB-500 Bidet Seat"
+						/>
+					</div>
+					<div class="product-content reveal-left">
+						<p class="product-number">01</p>
+						<p class="eyebrow">BB-500</p>
+						<h2 class="product-title">The Perfect<br />Starting Point.</h2>
+						<p class="product-price">
+							From <strong>$199</strong> <span class="price-reg">$219</span>
+						</p>
+						<p class="product-desc">
+							Everything you need, nothing you don't. The BB-500 delivers warm
+							water, a heated seat, and a slim 3.3" profile — with intuitive
+							side-panel controls and zero learning curve.
+						</p>
+						<ul class="feature-list">
+							<li>Rear &amp; Front Wash</li>
+							<li>Unlimited Warm Water</li>
+							<li>Heated Seat (3 levels)</li>
+							<li>Night Light</li>
+							<li>Slow-Close Lid</li>
+							<li>Seat Sensor</li>
+							<li>DIY Install</li>
+							<li>1-Year Warranty</li>
+						</ul>
+						<div class="product-tag">Elongated · Side Panel Controls</div>
+						<a
+							href="#"
+							class="btn btn-dark"
+							>Learn More</a
+						>
+					</div>
+				</div>
+			</section>
 
-        <!-- COLLECTION INTRO -->
-        <section class="collection-intro" id="collection">
-            <div class="collection-intro-inner">
-                <p class="eyebrow reveal-fade">Best Selling Bidet Seats</p>
-                <h2 class="section-title reveal-up">Five seats.<br>One standard of clean.</h2>
-                <p class="section-sub reveal-up delay-1">From essential to extraordinary — find the Bio Bidet seat that fits your bathroom, your budget, and your life.</p>
-            </div>
-        </section>
+			<!-- BB-1000 -->
+			<section
+				class="product-section product-section--alt"
+				id="bb-1000"
+			>
+				<div class="product-inner">
+					<div class="product-content reveal-right">
+						<p class="product-number">02</p>
+						<p class="eyebrow">BB-1000 Supreme</p>
+						<h2 class="product-title">Three Washes.<br />Total Control.</h2>
+						<p class="product-price">
+							From <strong>$359</strong> <span class="price-reg">$399</span>
+						</p>
+						<p class="product-desc">
+							The BB-1000 Supreme brings a wireless remote, automatic
+							deodorizer, and a three-in-one wash system — posterior, feminine,
+							and vortex. Available in both elongated and round.
+						</p>
+						<ul class="feature-list">
+							<li>Rear, Front &amp; Vortex Wash</li>
+							<li>Wireless Remote + Wall Mount</li>
+							<li>Heated Seat</li>
+							<li>Warm Air Dryer</li>
+							<li>Auto Deodorizer</li>
+							<li>Slow-Close Lid</li>
+							<li>Seat Sensor</li>
+							<li>3-Year Warranty</li>
+						</ul>
+						<div class="product-tag">
+							Elongated &amp; Round · Wireless Remote
+						</div>
+						<a
+							href="#"
+							class="btn btn-dark"
+							>Learn More</a
+						>
+					</div>
+					<div class="product-media reveal-left">
+						<img
+							src="biobidet_images/bb-1000-lifestyle_web.webp"
+							alt="BB-1000 Supreme Bidet Seat"
+						/>
+					</div>
+				</div>
+			</section>
 
-        <!-- BB-500 -->
-        <section class="product-section" id="bb-500">
-            <div class="product-inner">
-                <div class="product-media reveal-right">
-                    <img src="biobidet_images/bb-500-lifestyle_web.webp" alt="BB-500 Bidet Seat">
-                </div>
-                <div class="product-content reveal-left">
-                    <p class="product-number">01</p>
-                    <p class="eyebrow">BB-500</p>
-                    <h2 class="product-title">The Perfect<br>Starting Point.</h2>
-                    <p class="product-price">From <strong>$199</strong> <span class="price-reg">$219</span></p>
-                    <p class="product-desc">Everything you need, nothing you don't. The BB-500 delivers warm water, a heated seat, and a slim 3.3" profile — with intuitive side-panel controls and zero learning curve.</p>
-                    <ul class="feature-list">
-                        <li>Rear &amp; Front Wash</li>
-                        <li>Unlimited Warm Water</li>
-                        <li>Heated Seat (3 levels)</li>
-                        <li>Night Light</li>
-                        <li>Slow-Close Lid</li>
-                        <li>Seat Sensor</li>
-                        <li>DIY Install</li>
-                        <li>1-Year Warranty</li>
-                    </ul>
-                    <div class="product-tag">Elongated · Side Panel Controls</div>
-                    <a href="#" class="btn btn-dark">Learn More</a>
-                </div>
-            </div>
-        </section>
+			<!-- BB-1200 -->
+			<section
+				class="product-section"
+				id="bb-1200"
+			>
+				<div class="product-inner">
+					<div class="product-media reveal-right">
+						<img
+							src="biobidet_images/BB1200_Lifestyle_9_web.webp"
+							alt="BB-1200 Bidet Seat"
+						/>
+					</div>
+					<div class="product-content reveal-left">
+						<p class="product-number">03</p>
+						<p class="eyebrow">BB-1200</p>
+						<h2 class="product-title">Stainless Steel.<br />Three-in-One.</h2>
+						<p class="product-price">
+							From <strong>$339</strong> <span class="price-reg">$399</span>
+						</p>
+						<p class="product-desc">
+							The BB-1200 steps it up with a stainless steel 3-in-1 nozzle,
+							turbo wash, and a wireless remote — all at a price that doesn't
+							compromise. Slim profile, serious clean.
+						</p>
+						<ul class="feature-list">
+							<li>Stainless Steel 3-in-1 Nozzle</li>
+							<li>Rear, Front &amp; Turbo Wash</li>
+							<li>Wireless Remote + Wall Mount</li>
+							<li>Unlimited Warm Water</li>
+							<li>Heated Seat</li>
+							<li>Warm Air Dryer</li>
+							<li>Night Light</li>
+							<li>1-Year Warranty</li>
+						</ul>
+						<div class="product-tag">Elongated · Stainless Steel Nozzle</div>
+						<a
+							href="#"
+							class="btn btn-dark"
+							>Learn More</a
+						>
+					</div>
+				</div>
+			</section>
 
-        <!-- BB-1000 -->
-        <section class="product-section product-section--alt" id="bb-1000">
-            <div class="product-inner">
-                <div class="product-content reveal-right">
-                    <p class="product-number">02</p>
-                    <p class="eyebrow">BB-1000 Supreme</p>
-                    <h2 class="product-title">Three Washes.<br>Total Control.</h2>
-                    <p class="product-price">From <strong>$359</strong> <span class="price-reg">$399</span></p>
-                    <p class="product-desc">The BB-1000 Supreme brings a wireless remote, automatic deodorizer, and a three-in-one wash system — posterior, feminine, and vortex. Available in both elongated and round.</p>
-                    <ul class="feature-list">
-                        <li>Rear, Front &amp; Vortex Wash</li>
-                        <li>Wireless Remote + Wall Mount</li>
-                        <li>Heated Seat</li>
-                        <li>Warm Air Dryer</li>
-                        <li>Auto Deodorizer</li>
-                        <li>Slow-Close Lid</li>
-                        <li>Seat Sensor</li>
-                        <li>3-Year Warranty</li>
-                    </ul>
-                    <div class="product-tag">Elongated &amp; Round · Wireless Remote</div>
-                    <a href="#" class="btn btn-dark">Learn More</a>
-                </div>
-                <div class="product-media reveal-left">
-                    <img src="biobidet_images/bb-1000-lifestyle_web.webp" alt="BB-1000 Supreme Bidet Seat">
-                </div>
-            </div>
-        </section>
+			<!-- BB-2000 -->
+			<section
+				class="product-section product-section--alt"
+				id="bb-2000"
+			>
+				<div class="product-inner">
+					<div class="product-content reveal-right">
+						<p class="product-number">04</p>
+						<p class="eyebrow">BB-2000</p>
+						<h2 class="product-title">Premium Touch.<br />Premium Clean.</h2>
+						<p class="product-price">
+							From <strong>$549</strong> <span class="price-reg">$559</span>
+						</p>
+						<p class="product-desc">
+							The BB-2000 raises the bar with a sleek digital display, full
+							feature control, and the complete warm water experience.
+							Engineered for those who refuse to compromise on comfort.
+						</p>
+						<ul class="feature-list">
+							<li>Rear &amp; Front Wash</li>
+							<li>Unlimited Warm Water</li>
+							<li>Heated Seat</li>
+							<li>Warm Air Dryer</li>
+							<li>Digital Display Panel</li>
+							<li>Night Light</li>
+							<li>Slow-Close Lid</li>
+							<li>Seat Sensor</li>
+						</ul>
+						<div class="product-tag">Elongated · Digital Panel</div>
+						<a
+							href="#"
+							class="btn btn-dark"
+							>Learn More</a
+						>
+					</div>
+					<div class="product-media reveal-left">
+						<img
+							src="biobidet_images/bb-2000-lifestyle_web.webp"
+							alt="BB-2000 Bidet Seat"
+						/>
+					</div>
+				</div>
+			</section>
 
-        <!-- BB-1200 -->
-        <section class="product-section" id="bb-1200">
-            <div class="product-inner">
-                <div class="product-media reveal-right">
-                    <img src="biobidet_images/BB1200_Lifestyle_9_web.webp" alt="BB-1200 Bidet Seat">
-                </div>
-                <div class="product-content reveal-left">
-                    <p class="product-number">03</p>
-                    <p class="eyebrow">BB-1200</p>
-                    <h2 class="product-title">Stainless Steel.<br>Three-in-One.</h2>
-                    <p class="product-price">From <strong>$339</strong> <span class="price-reg">$399</span></p>
-                    <p class="product-desc">The BB-1200 steps it up with a stainless steel 3-in-1 nozzle, turbo wash, and a wireless remote — all at a price that doesn't compromise. Slim profile, serious clean.</p>
-                    <ul class="feature-list">
-                        <li>Stainless Steel 3-in-1 Nozzle</li>
-                        <li>Rear, Front &amp; Turbo Wash</li>
-                        <li>Wireless Remote + Wall Mount</li>
-                        <li>Unlimited Warm Water</li>
-                        <li>Heated Seat</li>
-                        <li>Warm Air Dryer</li>
-                        <li>Night Light</li>
-                        <li>1-Year Warranty</li>
-                    </ul>
-                    <div class="product-tag">Elongated · Stainless Steel Nozzle</div>
-                    <a href="#" class="btn btn-dark">Learn More</a>
-                </div>
-            </div>
-        </section>
+			<!-- DISCOVERY DLS -->
+			<section
+				class="product-section product-section--dark"
+				id="discovery-dls"
+			>
+				<div class="product-inner">
+					<div class="product-media reveal-right">
+						<img
+							src="biobidet_images/Dealer-DLS-Listing-Image-5_web.webp"
+							alt="Discovery DLS Smart Bidet Seat"
+						/>
+					</div>
+					<div class="product-content reveal-left">
+						<p class="product-number product-number--light">05</p>
+						<p class="eyebrow eyebrow--light">Discovery DLS</p>
+						<h2 class="product-title product-title--light">
+							The Pinnacle<br />of Clean.
+						</h2>
+						<p class="product-price product-price--light">
+							From <strong>$599</strong>
+							<span class="price-reg price-reg--light">$699</span>
+						</p>
+						<p class="product-desc product-desc--light">
+							The Discovery DLS is everything — auto open/close, UV
+							sterilization, stainless steel nozzle, wireless remote, and a
+							5-year warranty. This is what the future of the bathroom feels
+							like.
+						</p>
+						<ul class="feature-list feature-list--light">
+							<li>Auto Open/Close Lid</li>
+							<li>UV Sterilization</li>
+							<li>Stainless Steel Nozzle</li>
+							<li>Wireless Remote + Wall Mount</li>
+							<li>Unlimited Warm Water</li>
+							<li>Heated Seat</li>
+							<li>Warm Air Dryer</li>
+							<li>Night Light</li>
+							<li>Adjustable Nozzle Position</li>
+							<li>5-Year Warranty</li>
+						</ul>
+						<div class="product-tag product-tag--light">
+							Elongated · 5-Year Warranty
+						</div>
+						<a
+							href="#"
+							class="btn btn-white"
+							>Learn More</a
+						>
+					</div>
+				</div>
+			</section>
 
-        <!-- BB-2000 -->
-        <section class="product-section product-section--alt" id="bb-2000">
-            <div class="product-inner">
-                <div class="product-content reveal-right">
-                    <p class="product-number">04</p>
-                    <p class="eyebrow">BB-2000</p>
-                    <h2 class="product-title">Premium Touch.<br>Premium Clean.</h2>
-                    <p class="product-price">From <strong>$549</strong> <span class="price-reg">$559</span></p>
-                    <p class="product-desc">The BB-2000 raises the bar with a sleek digital display, full feature control, and the complete warm water experience. Engineered for those who refuse to compromise on comfort.</p>
-                    <ul class="feature-list">
-                        <li>Rear &amp; Front Wash</li>
-                        <li>Unlimited Warm Water</li>
-                        <li>Heated Seat</li>
-                        <li>Warm Air Dryer</li>
-                        <li>Digital Display Panel</li>
-                        <li>Night Light</li>
-                        <li>Slow-Close Lid</li>
-                        <li>Seat Sensor</li>
-                    </ul>
-                    <div class="product-tag">Elongated · Digital Panel</div>
-                    <a href="#" class="btn btn-dark">Learn More</a>
-                </div>
-                <div class="product-media reveal-left">
-                    <img src="biobidet_images/bb-2000-lifestyle_web.webp" alt="BB-2000 Bidet Seat">
-                </div>
-            </div>
-        </section>
+			<!-- COMPARISON TABLE -->
+			<section
+				class="compare-section"
+				id="compare"
+			>
+				<div class="compare-inner">
+					<div class="compare-header">
+						<p class="eyebrow reveal-fade">Side by Side</p>
+						<h2 class="section-title reveal-up">Find your perfect match.</h2>
+						<p class="section-sub reveal-up delay-1">
+							Every Bio Bidet seat is built for clean. See exactly what each one
+							brings to your bathroom.
+						</p>
+					</div>
 
-        <!-- DISCOVERY DLS -->
-        <section class="product-section product-section--dark" id="discovery-dls">
-            <div class="product-inner">
-                <div class="product-media reveal-right">
-                    <img src="biobidet_images/Dealer-DLS-Listing-Image-5_web.webp" alt="Discovery DLS Smart Bidet Seat">
-                </div>
-                <div class="product-content reveal-left">
-                    <p class="product-number product-number--light">05</p>
-                    <p class="eyebrow eyebrow--light">Discovery DLS</p>
-                    <h2 class="product-title product-title--light">The Pinnacle<br>of Clean.</h2>
-                    <p class="product-price product-price--light">From <strong>$599</strong> <span class="price-reg price-reg--light">$699</span></p>
-                    <p class="product-desc product-desc--light">The Discovery DLS is everything — auto open/close, UV sterilization, stainless steel nozzle, wireless remote, and a 5-year warranty. This is what the future of the bathroom feels like.</p>
-                    <ul class="feature-list feature-list--light">
-                        <li>Auto Open/Close Lid</li>
-                        <li>UV Sterilization</li>
-                        <li>Stainless Steel Nozzle</li>
-                        <li>Wireless Remote + Wall Mount</li>
-                        <li>Unlimited Warm Water</li>
-                        <li>Heated Seat</li>
-                        <li>Warm Air Dryer</li>
-                        <li>Night Light</li>
-                        <li>Adjustable Nozzle Position</li>
-                        <li>5-Year Warranty</li>
-                    </ul>
-                    <div class="product-tag product-tag--light">Elongated · 5-Year Warranty</div>
-                    <a href="#" class="btn btn-white">Learn More</a>
-                </div>
-            </div>
-        </section>
+					<div class="compare-table-wrap reveal-up delay-2">
+						<table class="compare-table">
+							<thead>
+								<tr>
+									<th class="feature-col"></th>
+									<th>
+										<span class="model-name">BB-500</span>
+										<span class="model-price">$199</span>
+									</th>
+									<th>
+										<span class="model-name">BB-1000</span>
+										<span class="model-price">$359</span>
+									</th>
+									<th>
+										<span class="model-name">BB-1200</span>
+										<span class="model-price">$339</span>
+									</th>
+									<th>
+										<span class="model-name">BB-2000</span>
+										<span class="model-price">$549</span>
+									</th>
+									<th class="col-highlight">
+										<span class="model-name">Discovery DLS</span>
+										<span class="model-price">$599</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="feature-name">Rear Wash</td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Front Wash</td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Unlimited Warm Water</td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Heated Seat</td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Night Light</td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Slow-Close Lid</td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Seat Sensor</td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Warm Air Dryer</td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Wireless Remote</td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Auto Deodorizer</td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dot"></span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Stainless Steel Nozzle</td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dot"></span></td>
+									<td><span class="dash">—</span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Adjustable Nozzle Position</td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Auto Open/Close Lid</td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">UV Sterilization</td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td><span class="dash">—</span></td>
+									<td class="col-highlight"><span class="dot"></span></td>
+								</tr>
+								<tr>
+									<td class="feature-name">Warranty</td>
+									<td class="feature-text">1 Year</td>
+									<td class="feature-text">3 Year</td>
+									<td class="feature-text">1 Year</td>
+									<td class="feature-text">2 Year</td>
+									<td class="col-highlight feature-text highlight-text">
+										5 Years
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td></td>
+									<td>
+										<a
+											href="#"
+											class="btn btn-dark btn-sm"
+											>Shop BB-500</a
+										>
+									</td>
+									<td>
+										<a
+											href="#"
+											class="btn btn-dark btn-sm"
+											>Shop BB-1000</a
+										>
+									</td>
+									<td>
+										<a
+											href="#"
+											class="btn btn-dark btn-sm"
+											>Shop BB-1200</a
+										>
+									</td>
+									<td>
+										<a
+											href="#"
+											class="btn btn-dark btn-sm"
+											>Shop BB-2000</a
+										>
+									</td>
+									<td class="col-highlight">
+										<a
+											href="#"
+											class="btn btn-primary btn-sm"
+											>Shop DLS</a
+										>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</section>
 
-        <!-- COMPARISON TABLE -->
-        <section class="compare-section" id="compare">
-            <div class="compare-inner">
-                <div class="compare-header">
-                    <p class="eyebrow reveal-fade">Side by Side</p>
-                    <h2 class="section-title reveal-up">Find your perfect match.</h2>
-                    <p class="section-sub reveal-up delay-1">Every Bio Bidet seat is built for clean. See exactly what each one brings to your bathroom.</p>
-                </div>
+			<!-- CTA STRIP -->
+			<section class="cta-strip">
+				<div class="cta-inner reveal-up">
+					<p class="eyebrow">Not Sure Where to Start?</p>
+					<h2 class="cta-title">Find your perfect<br />Bio Bidet match.</h2>
+					<p class="cta-sub">
+						Take our quick quiz or contact a Bio Bidet representative for
+						personalized guidance.
+					</p>
+					<div class="cta-actions">
+						<a
+							href="#"
+							class="btn btn-primary btn-large"
+							>Take the Bidet Quiz</a
+						>
+						<a
+							href="#"
+							class="btn btn-outline btn-large"
+							>Contact a Rep</a
+						>
+					</div>
+				</div>
+			</section>
+		</main>
 
-                <div class="compare-table-wrap reveal-up delay-2">
-                    <table class="compare-table">
-                        <thead>
-                            <tr>
-                                <th class="feature-col"></th>
-                                <th>
-                                    <span class="model-name">BB-500</span>
-                                    <span class="model-price">$199</span>
-                                </th>
-                                <th>
-                                    <span class="model-name">BB-1000</span>
-                                    <span class="model-price">$359</span>
-                                </th>
-                                <th>
-                                    <span class="model-name">BB-1200</span>
-                                    <span class="model-price">$339</span>
-                                </th>
-                                <th>
-                                    <span class="model-name">BB-2000</span>
-                                    <span class="model-price">$549</span>
-                                </th>
-                                <th class="col-highlight">
-                                    <span class="model-name">Discovery DLS</span>
-                                    <span class="model-price">$599</span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="feature-name">Rear Wash</td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Front Wash</td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Unlimited Warm Water</td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Heated Seat</td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Night Light</td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Slow-Close Lid</td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Seat Sensor</td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Warm Air Dryer</td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Wireless Remote</td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Auto Deodorizer</td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dot"></span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Stainless Steel Nozzle</td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dash">—</span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Adjustable Nozzle Position</td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Auto Open/Close Lid</td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">UV Sterilization</td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td><span class="dash">—</span></td>
-                                <td class="col-highlight"><span class="dot"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Warranty</td>
-                                <td class="feature-text">1 Year</td>
-                                <td class="feature-text">3 Year</td>
-                                <td class="feature-text">1 Year</td>
-                                <td class="feature-text">2 Year</td>
-                                <td class="col-highlight feature-text highlight-text">5 Years</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td></td>
-                                <td><a href="#" class="btn btn-dark btn-sm">Shop BB-500</a></td>
-                                <td><a href="#" class="btn btn-dark btn-sm">Shop BB-1000</a></td>
-                                <td><a href="#" class="btn btn-dark btn-sm">Shop BB-1200</a></td>
-                                <td><a href="#" class="btn btn-dark btn-sm">Shop BB-2000</a></td>
-                                <td class="col-highlight"><a href="#" class="btn btn-primary btn-sm">Shop DLS</a></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
-        </section>
+		<!-- FOOTER -->
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<div class="footer-col footer-col--contact">
+					<h4>Get in touch</h4>
+					<ul>
+						<li>
+							<a
+								href="tel:8474582334"
+								class="footer-contact-link"
+							>
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 0 0 .21 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+									></path>
+								</svg>
+								847.458.2334
+							</a>
+						</li>
+						<li>
+							<a
+								href="mailto:info@biobidet.com"
+								class="footer-contact-link"
+							>
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+									></path>
+									<polyline points="22,6 12,13 2,6"></polyline>
+								</svg>
+								Email us
+							</a>
+						</li>
+					</ul>
+					<p class="footer-social-label">Follow us</p>
+					<div class="footer-social">
+						<a
+							href="#"
+							aria-label="Instagram"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<rect
+									x="2"
+									y="2"
+									width="20"
+									height="20"
+									rx="5"
+									ry="5"
+								></rect>
+								<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+								<line
+									x1="17.5"
+									y1="6.5"
+									x2="17.51"
+									y2="6.5"
+								></line>
+							</svg>
+						</a>
+						<a
+							href="#"
+							aria-label="Facebook"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path
+									d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+								></path>
+							</svg>
+						</a>
+						<a
+							href="#"
+							aria-label="YouTube"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path
+									d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"
+								></path>
+								<polygon
+									points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
+								></polygon>
+							</svg>
+						</a>
+						<a
+							href="#"
+							aria-label="Twitter"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path
+									d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+								></path>
+							</svg>
+						</a>
+						<a
+							href="#"
+							aria-label="Pinterest"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path
+									d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.568 0-2.39-1.716-4.061-4.168-4.061-2.837 0-4.5 2.128-4.5 4.327 0 .857.33 1.775.741 2.278a.3.3 0 01.069.286c-.076.31-.244.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.938.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"
+								></path>
+							</svg>
+						</a>
+						<a
+							href="#"
+							aria-label="TikTok"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
 
-        <!-- CTA STRIP -->
-        <section class="cta-strip">
-            <div class="cta-inner reveal-up">
-                <p class="eyebrow">Not Sure Where to Start?</p>
-                <h2 class="cta-title">Find your perfect<br>Bio Bidet match.</h2>
-                <p class="cta-sub">Take our quick quiz or contact a Bio Bidet representative for personalized guidance.</p>
-                <div class="cta-actions">
-                    <a href="#" class="btn btn-primary btn-large">Take the Bidet Quiz</a>
-                    <a href="#" class="btn btn-outline btn-large">Contact a Rep</a>
-                </div>
-            </div>
-        </section>
+				<div class="footer-col">
+					<h4>Main Menu</h4>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</div>
 
-    </main>
+				<div class="footer-col">
+					<h4>Shop</h4>
+					<ul>
+						<li><a href="#">Bidet Toilets</a></li>
+						<li><a href="#">Bidet Seats</a></li>
+						<li><a href="#">Bidet Attachments</a></li>
+						<li><a href="#">Featured Bidets</a></li>
+						<li><a href="#">Outlet Center</a></li>
+						<li><a href="#">Accessories</a></li>
+						<li><a href="#">Parts</a></li>
+					</ul>
+				</div>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="footer-inner">
+				<div class="footer-col">
+					<h4>Customer Service</h4>
+					<ul>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Return Policy</a></li>
+						<li><a href="#">Waiver</a></li>
+						<li><a href="#">Shipping Policy</a></li>
+						<li><a href="#">Refund Policy</a></li>
+						<li><a href="#">Terms of Service</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
 
-            <div class="footer-col footer-col--contact">
-                <h4>Get in touch</h4>
-                <ul>
-                    <li>
-                        <a href="tel:8474582334" class="footer-contact-link">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 0 0 .21 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            847.458.2334
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@biobidet.com" class="footer-contact-link">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            Email us
-                        </a>
-                    </li>
-                </ul>
-                <p class="footer-social-label">Follow us</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="#" aria-label="Facebook">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
-                    </a>
-                    <a href="#" aria-label="YouTube">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
-                    </a>
-                    <a href="#" aria-label="Pinterest">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.568 0-2.39-1.716-4.061-4.168-4.061-2.837 0-4.5 2.128-4.5 4.327 0 .857.33 1.775.741 2.278a.3.3 0 01.069.286c-.076.31-.244.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.938.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"></path></svg>
-                    </a>
-                    <a href="#" aria-label="TikTok">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path></svg>
-                    </a>
-                </div>
-            </div>
+				<div class="footer-col">
+					<h4>Resources</h4>
+					<ul>
+						<li><a href="#">Resource Center</a></li>
+						<li><a href="#">Warranty</a></li>
+						<li><a href="#">Bidet Quiz</a></li>
+						<li><a href="#">Comparison Chart</a></li>
+						<li><a href="#">Toilet Compatibility Guide</a></li>
+						<li><a href="#">Buying Guide Steps</a></li>
+						<li><a href="#">Honor Club</a></li>
+						<li><a href="#">CCPA Privacy Policy</a></li>
+					</ul>
+				</div>
 
-            <div class="footer-col">
-                <h4>Main Menu</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
+				<div class="footer-col">
+					<h4>Business Inquiry</h4>
+					<ul>
+						<li><a href="#">Dealer Inquiry</a></li>
+						<li><a href="#">Global Inquiry</a></li>
+						<li><a href="#">Affiliate Program</a></li>
+						<li><a href="#">Affiliate Login</a></li>
+						<li><a href="#">Dealer Login</a></li>
+					</ul>
+				</div>
 
-            <div class="footer-col">
-                <h4>Shop</h4>
-                <ul>
-                    <li><a href="#">Bidet Toilets</a></li>
-                    <li><a href="#">Bidet Seats</a></li>
-                    <li><a href="#">Bidet Attachments</a></li>
-                    <li><a href="#">Featured Bidets</a></li>
-                    <li><a href="#">Outlet Center</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Parts</a></li>
-                </ul>
-            </div>
+				<div class="footer-col">
+					<h4>Education</h4>
+					<ul>
+						<li><a href="#">News</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Comparison Chart</a></li>
+						<li><a href="#">Toilet Compatibility</a></li>
+						<li><a href="#">How To Use a Bidet</a></li>
+						<li><a href="#">Why Use a Bidet?</a></li>
+						<li><a href="#">Japanese Toilets</a></li>
+					</ul>
+				</div>
+			</div>
 
-            <div class="footer-col">
-                <h4>Customer Service</h4>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Return Policy</a></li>
-                    <li><a href="#">Waiver</a></li>
-                    <li><a href="#">Shipping Policy</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
+			<div class="footer-payments">
+				<p class="footer-payments-label">We accept</p>
+				<div class="payment-icons">
+					<span class="payment-badge">AMEX</span>
+					<span class="payment-badge">Apple Pay</span>
+					<span class="payment-badge">Diners</span>
+					<span class="payment-badge">Discover</span>
+					<span class="payment-badge">Google Pay</span>
+					<span class="payment-badge">Mastercard</span>
+					<span class="payment-badge">PayPal</span>
+					<span class="payment-badge">Shop Pay</span>
+					<span class="payment-badge">Visa</span>
+				</div>
+			</div>
 
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Resource Center</a></li>
-                    <li><a href="#">Warranty</a></li>
-                    <li><a href="#">Bidet Quiz</a></li>
-                    <li><a href="#">Comparison Chart</a></li>
-                    <li><a href="#">Toilet Compatibility Guide</a></li>
-                    <li><a href="#">Buying Guide Steps</a></li>
-                    <li><a href="#">Honor Club</a></li>
-                    <li><a href="#">CCPA Privacy Policy</a></li>
-                </ul>
-            </div>
+			<div class="footer-bottom">
+				<p>&copy; 2026 Bio Bidet</p>
+			</div>
+		</footer>
 
-            <div class="footer-col">
-                <h4>Business Inquiry</h4>
-                <ul>
-                    <li><a href="#">Dealer Inquiry</a></li>
-                    <li><a href="#">Global Inquiry</a></li>
-                    <li><a href="#">Affiliate Program</a></li>
-                    <li><a href="#">Affiliate Login</a></li>
-                    <li><a href="#">Dealer Login</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Education</h4>
-                <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Comparison Chart</a></li>
-                    <li><a href="#">Toilet Compatibility</a></li>
-                    <li><a href="#">How To Use a Bidet</a></li>
-                    <li><a href="#">Why Use a Bidet?</a></li>
-                    <li><a href="#">Japanese Toilets</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="footer-payments">
-            <p class="footer-payments-label">We accept</p>
-            <div class="payment-icons">
-                <span class="payment-badge">AMEX</span>
-                <span class="payment-badge">Apple Pay</span>
-                <span class="payment-badge">Diners</span>
-                <span class="payment-badge">Discover</span>
-                <span class="payment-badge">Google Pay</span>
-                <span class="payment-badge">Mastercard</span>
-                <span class="payment-badge">PayPal</span>
-                <span class="payment-badge">Shop Pay</span>
-                <span class="payment-badge">Visa</span>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Bio Bidet</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+	</body>
 </html>

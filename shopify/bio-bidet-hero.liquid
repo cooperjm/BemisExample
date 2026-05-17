@@ -1,0 +1,393 @@
+{% liquid
+  assign hero_image = section.settings.hero_image
+  assign image_alt = section.settings.image_alt | default: section.settings.eyebrow | escape
+%}
+
+<section class="bio-bidet-hero" data-section-id="{{ section.id }}">
+  <div class="bio-bidet-hero__media">
+    {% if hero_image != blank %}
+      {{
+        hero_image
+        | image_url: width: 2400
+        | image_tag:
+          class: 'bio-bidet-hero__image',
+          widths: '750, 1100, 1500, 2000, 2400',
+          sizes: '100vw',
+          alt: image_alt,
+          loading: 'eager'
+      }}
+    {% else %}
+      <img
+        src="{{ 'hero_web.webp' | asset_url }}"
+        alt="{{ image_alt }}"
+        class="bio-bidet-hero__image"
+        loading="eager"
+      >
+    {% endif %}
+    <div class="bio-bidet-hero__overlay"></div>
+  </div>
+
+  <div class="bio-bidet-hero__content">
+    {% if section.settings.eyebrow != blank %}
+      <p class="bio-bidet-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+    {% endif %}
+
+    {% if section.settings.heading != blank %}
+      <h1 class="bio-bidet-hero__heading">{{ section.settings.heading }}</h1>
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      <p class="bio-bidet-hero__subheading">{{ section.settings.subheading }}</p>
+    {% endif %}
+
+    {% if section.settings.primary_label != blank or section.settings.secondary_label != blank %}
+      <div class="bio-bidet-hero__actions">
+        {% if section.settings.primary_label != blank %}
+          <a
+            href="{{ section.settings.primary_link | default: '#' }}"
+            class="bio-bidet-hero__button bio-bidet-hero__button--primary"
+          >
+            {{ section.settings.primary_label }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.secondary_label != blank %}
+          <a
+            href="{{ section.settings.secondary_link | default: '#' }}"
+            class="bio-bidet-hero__button bio-bidet-hero__button--ghost"
+          >
+            {{ section.settings.secondary_label }}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if section.settings.show_scroll_indicator %}
+    <div class="bio-bidet-hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="bio-bidet-hero__scroll-line"></div>
+    </div>
+  {% endif %}
+</section>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --bio-bidet-hero-font: Lato, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    --bio-bidet-hero-navy: #00346e;
+    --bio-bidet-hero-navy-hover: #1c4b8e;
+    --bio-bidet-hero-cyan: #00acf0;
+    --bio-bidet-hero-cyan-light: #94d8ff;
+    --bio-bidet-hero-ink: #1b2227;
+    --bio-bidet-hero-light-gray: #e6e7e8;
+    --bio-bidet-hero-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: var(--bio-bidet-hero-font);
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__media {
+    position: absolute;
+    inset: 0;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__image {
+    display: block;
+    width: 100%;
+    height: 115%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    will-change: transform;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(0, 52, 110, 0.12) 0%,
+      rgba(0, 52, 110, 0.56) 50%,
+      rgba(27, 34, 39, 0.82) 100%
+    );
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 820px;
+    padding: 0 28px;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bio-bidet-hero-cyan-light);
+    margin: 0 0 18px;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: bio-bidet-hero-fade-up-{{ section.id }} 0.8s var(--bio-bidet-hero-ease) forwards 0.3s;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__heading {
+    font-size: clamp(52px, 9vw, 100px);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1.03;
+    color: #fff;
+    margin: 0 0 22px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: bio-bidet-hero-fade-up-{{ section.id }} 0.9s var(--bio-bidet-hero-ease) forwards 0.55s;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__subheading {
+    font-size: clamp(17px, 2.2vw, 21px);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 40px;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: bio-bidet-hero-fade-up-{{ section.id }} 0.8s var(--bio-bidet-hero-ease) forwards 0.85s;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: bio-bidet-hero-fade-up-{{ section.id }} 0.8s var(--bio-bidet-hero-ease) forwards 1.05s;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__button {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 980px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.22s ease, transform 0.18s ease;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__button--primary {
+    background: var(--bio-bidet-hero-cyan);
+    color: var(--bio-bidet-hero-ink);
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__button--primary:hover {
+    background: var(--bio-bidet-hero-cyan-light);
+    transform: scale(1.02);
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__button--ghost {
+    background: rgba(0, 52, 110, 0.18);
+    color: #fff;
+    border: 1px solid rgba(230, 231, 232, 0.42);
+    backdrop-filter: blur(10px);
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__button--ghost:hover {
+    background: rgba(0, 52, 110, 0.38);
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: bio-bidet-hero-fade-in-{{ section.id }} 1s ease forwards 1.6s;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__scroll-line {
+    width: 1px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .bio-bidet-hero__scroll-line::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    animation: bio-bidet-hero-scroll-drop-{{ section.id }} 1.8s ease-in-out infinite 2s;
+  }
+
+  @keyframes bio-bidet-hero-fade-up-{{ section.id }} {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bio-bidet-hero-fade-in-{{ section.id }} {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bio-bidet-hero-scroll-drop-{{ section.id }} {
+    0% {
+      top: -100%;
+    }
+
+    100% {
+      top: 120%;
+    }
+  }
+
+  @media (max-width: 560px) {
+    #shopify-section-{{ section.id }} .bio-bidet-hero__actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #shopify-section-{{ section.id }} .bio-bidet-hero__button {
+      white-space: normal;
+      text-align: center;
+    }
+  }
+</style>
+
+{% if section.settings.enable_parallax %}
+  <script>
+    (() => {
+      const section = document.getElementById('shopify-section-{{ section.id }}');
+      if (!section) return;
+
+      const hero = section.querySelector('.bio-bidet-hero');
+      const heroImage = section.querySelector('.bio-bidet-hero__image');
+      if (!hero || !heroImage) return;
+
+      const updateParallax = () => {
+        const rect = hero.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (rect.bottom < 0 || rect.top > viewportHeight) return;
+
+        const offset = Math.max(0, -rect.top);
+        heroImage.style.transform = `translateY(${offset * 0.38}px)`;
+      };
+
+      updateParallax();
+      window.addEventListener('scroll', updateParallax, { passive: true });
+      window.addEventListener('resize', updateParallax);
+
+      document.addEventListener('shopify:section:unload', (event) => {
+        if (event.detail.sectionId !== '{{ section.id }}') return;
+        window.removeEventListener('scroll', updateParallax);
+        window.removeEventListener('resize', updateParallax);
+      });
+    })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Bio Bidet Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "Bio Bidet"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Bio Bidet"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Water does<br>it better."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Selecting the perfect Bio Bidet model for your lifestyle is easy."
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Primary button label",
+      "default": "Explore the Collection"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary button label",
+      "default": "Compare Models"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_scroll_indicator",
+      "label": "Show scroll indicator",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_parallax",
+      "label": "Enable parallax",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bio Bidet Hero"
+    }
+  ]
+}
+{% endschema %}

@@ -8,13 +8,17 @@
 }
 
 :root {
-    --font:   -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-    --black:  #1d1d1f;
-    --mid:    #6e6e73;
-    --light:  #f5f5f7;
+    --font:   Lato, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    --black:  #1b2227;
+    --mid:    #777b7a;
+    --light:  #e6e7e8;
     --white:  #ffffff;
-    --blue:   #0071e3;
-    --blue-h: #0077ed;
+    --navy:   #00346e;
+    --navy-h: #1c4b8e;
+    --blue:   #00346e;
+    --blue-h: #1c4b8e;
+    --cyan:   #00acf0;
+    --cyan-l: #94d8ff;
     --radius: 20px;
     --ease:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -41,7 +45,7 @@ ul   { list-style: none; }
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    background: #0d2b5e;
+    background: var(--navy);
     transition: box-shadow 0.3s ease;
 }
 
@@ -147,9 +151,9 @@ ul   { list-style: none; }
     inset: 0;
     background: linear-gradient(
         160deg,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(0, 0, 0, 0.75) 100%
+        rgba(0, 52, 110, 0.12) 0%,
+        rgba(0, 52, 110, 0.56) 50%,
+        rgba(27, 34, 39, 0.82) 100%
     );
 }
 
@@ -167,7 +171,7 @@ ul   { list-style: none; }
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--cyan-l);
     margin-bottom: 18px;
     opacity: 0;
     transform: translateY(18px);
@@ -176,8 +180,8 @@ ul   { list-style: none; }
 
 .hero-headline {
     font-size: clamp(52px, 9vw, 100px);
-    font-weight: 700;
-    letter-spacing: -0.04em;
+    font-weight: 900;
+    letter-spacing: 0;
     line-height: 1.03;
     color: #fff;
     margin-bottom: 22px;
@@ -260,22 +264,22 @@ ul   { list-style: none; }
     white-space: nowrap;
 }
 
-.btn-primary { background: var(--blue); color: #fff; }
-.btn-primary:hover { background: var(--blue-h); transform: scale(1.02); }
+.btn-primary { background: var(--cyan); color: var(--black); }
+.btn-primary:hover { background: var(--cyan-l); transform: scale(1.02); }
 
 .btn-ghost {
-    background: rgba(255,255,255,0.14);
+    background: rgba(0, 52, 110, 0.18);
     color: #fff;
-    border: 1px solid rgba(255,255,255,0.32);
+    border: 1px solid rgba(230, 231, 232, 0.42);
     backdrop-filter: blur(10px);
 }
-.btn-ghost:hover { background: rgba(255,255,255,0.24); }
+.btn-ghost:hover { background: rgba(0, 52, 110, 0.38); }
 
 .btn-dark { background: var(--black); color: #fff; }
-.btn-dark:hover { background: #3a3a3c; transform: scale(1.02); }
+.btn-dark:hover { background: var(--navy-h); transform: scale(1.02); }
 
 .btn-white { background: #fff; color: var(--black); }
-.btn-white:hover { background: #e8e8ed; transform: scale(1.02); }
+.btn-white:hover { background: var(--light); transform: scale(1.02); }
 
 .btn-outline {
     background: transparent;
@@ -299,7 +303,7 @@ ul   { list-style: none; }
     margin-bottom: 12px;
 }
 
-.eyebrow--light { color: rgba(100, 180, 255, 0.9); }
+.eyebrow--light { color: var(--cyan-l); }
 
 /* ============================================================
    COLLECTION INTRO
@@ -335,7 +339,7 @@ ul   { list-style: none; }
    ============================================================ */
 .product-section { padding: 110px 28px; background: var(--white); }
 .product-section--alt  { background: var(--light); }
-.product-section--dark { background: #1d1d1f; }
+.product-section--dark { background: var(--black); }
 
 .product-inner {
     max-width: 1160px;
@@ -427,13 +431,13 @@ ul   { list-style: none; }
     content: '·';
     position: absolute;
     left: 0;
-    color: var(--blue);
+    color: var(--cyan);
     font-size: 20px;
     line-height: 1.1;
 }
 
 .feature-list--light li { color: rgba(255, 255, 255, 0.55); }
-.feature-list--light li::before { color: rgba(100, 180, 255, 0.7); }
+.feature-list--light li::before { color: var(--cyan-l); }
 
 .product-tag {
     display: inline-block;
