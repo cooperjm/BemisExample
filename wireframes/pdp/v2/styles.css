@@ -50,7 +50,7 @@ p {
 .promo-strip {
 	background-color: var(--cyan);
 	color: var(--navy-deep);
-	font-size: 11px;
+	font-size: 14px;
 	font-weight: 900;
 	text-align: center;
 	padding: 8px 12px;
@@ -105,7 +105,7 @@ p {
 }
 
 .nav-links a {
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
@@ -374,7 +374,7 @@ p {
 	background: rgba(0, 172, 240, 0.12);
 	border: 1px solid rgba(0, 172, 240, 0.25);
 	color: var(--cyan-light);
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.12em;
@@ -407,7 +407,7 @@ p {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	font-size: 12px;
+	font-size: 14.5px;
 	font-weight: 700;
 }
 
@@ -446,7 +446,7 @@ p {
 .config-label-row {
 	display: flex;
 	justify-content: space-between;
-	font-size: 12px;
+	font-size: 14.5px;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
 	font-weight: 700;
@@ -475,7 +475,7 @@ p {
 	background: none;
 	border: none;
 	color: rgba(255, 255, 255, 0.74);
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
 	padding: 11px 18px;
 	cursor: pointer;
@@ -539,7 +539,7 @@ p {
 .save-tag {
 	background: #00C896;
 	color: var(--navy-deep);
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: 900;
 	padding: 4px 10px;
 	border-radius: 99px;
@@ -549,7 +549,7 @@ p {
 }
 
 .price-sub {
-	font-size: 12px;
+	font-size: 14.5px;
 	color: rgba(255, 255, 255, 0.6);
 	margin: 6px 0 0;
 }
@@ -573,7 +573,7 @@ p {
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	font-size: 12px;
+	font-size: 14.5px;
 	color: rgba(255, 255, 255, 0.8);
 }
 
@@ -649,7 +649,7 @@ p {
 	background: #00D166;
 	color: var(--white);
 	font-weight: 900;
-	font-size: 11px;
+	font-size: 14px;
 	padding: 6px 12px;
 	border-radius: 99px;
 	letter-spacing: -0.02em;
@@ -658,7 +658,7 @@ p {
 .taskrabbit-card .tr-info {
 	display: flex;
 	flex-direction: column;
-	font-size: 11px;
+	font-size: 14px;
 }
 
 .taskrabbit-card .tr-info strong {
@@ -691,7 +691,7 @@ p {
 	align-items: center;
 	padding: 18px 0;
 	font-weight: 700;
-	font-size: 13px;
+	font-size: 14.5px;
 	cursor: pointer;
 	outline: none;
 }
@@ -732,7 +732,7 @@ p {
 }
 
 .accordion-content p {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.6;
 	color: rgba(255, 255, 255, 0.7);
 	margin: 0;
@@ -750,7 +750,7 @@ p {
 .spec-list li {
 	display: flex;
 	justify-content: space-between;
-	font-size: 11px;
+	font-size: 14px;
 	padding: 6px 0;
 	border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
 }
@@ -821,7 +821,7 @@ p {
 }
 
 .chapter-kicker {
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
@@ -850,7 +850,7 @@ p {
 }
 
 .pill-tag {
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
@@ -946,7 +946,7 @@ p {
 	background: none;
 	border: none;
 	padding: 16px 28px;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
@@ -1053,7 +1053,7 @@ p {
 	justify-content: space-between;
 	padding: 14px 0;
 	border-bottom: 1px solid var(--light);
-	font-size: 13px;
+	font-size: 14.5px;
 }
 
 .compat-metrics li span:first-child {
@@ -1065,7 +1065,7 @@ p {
 }
 
 .alert-info-text {
-	font-size: 12px;
+	font-size: 14.5px;
 	background: #EEF6FF;
 	color: #0F52BA;
 	border: 1px solid #C6E0FF;
@@ -1088,7 +1088,7 @@ p {
 
 .comp-box strong {
 	display: block;
-	font-size: 13px;
+	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
 	margin-bottom: 6px;
@@ -1113,7 +1113,7 @@ p {
 }
 
 .comp-box span {
-	font-size: 11px;
+	font-size: 14px;
 	line-height: 1.5;
 	color: var(--mid);
 }
@@ -1126,12 +1126,12 @@ p {
 
 .outlet-warning strong {
 	display: block;
-	font-size: 13px;
+	font-size: 14px;
 	margin-bottom: 4px;
 }
 
 .outlet-warning p {
-	font-size: 12px;
+	font-size: 14.5px;
 	color: var(--mid);
 	margin: 0;
 }
@@ -1190,14 +1190,14 @@ p {
 
 .review-card p {
 	color: var(--mid);
-	font-size: 13px;
+	font-size: 14.5px;
 	line-height: 1.6;
 	margin-bottom: 24px;
 	flex-grow: 1;
 }
 
 .review-card .reviewer {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
 	color: var(--navy);
 	text-transform: uppercase;
@@ -1238,11 +1238,11 @@ p {
 }
 
 .sticky-prod-info strong {
-	font-size: 13px;
+	font-size: 14.5px;
 }
 
 .sticky-prod-info span {
-	font-size: 12px;
+	font-size: 14.5px;
 	color: var(--cyan-light);
 	font-weight: 700;
 }
@@ -1253,7 +1253,7 @@ p {
 	border: none;
 	padding: 10px 24px;
 	border-radius: 999px;
-	font-size: 12px;
+	font-size: 14.5px;
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
@@ -1295,7 +1295,7 @@ p {
 
 .footer-col h4 {
 	color: var(--white);
-	font-size: 11px;
+	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	margin-bottom: 20px;
@@ -1305,7 +1305,7 @@ p {
 	display: block;
 	color: rgba(255, 255, 255, 0.65);
 	text-decoration: none;
-	font-size: 13px;
+	font-size: 14.5px;
 	margin-bottom: 12px;
 	transition: color 0.2s var(--ease);
 }
@@ -1316,7 +1316,7 @@ p {
 
 .copyright {
 	text-align: center;
-	font-size: 11px;
+	font-size: 14px;
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
 	padding-top: 30px;
 	color: rgba(255, 255, 255, 0.4);
@@ -1431,7 +1431,7 @@ p {
 
 @media (max-width: 480px) {
 	.promo-strip {
-		font-size: 9px;
+		font-size: 14px;
 	}
 
 	.site-header {
@@ -1452,17 +1452,17 @@ p {
 
 	.segment-option {
 		padding: 9px 12px;
-		font-size: 11px;
+		font-size: 14px;
 	}
 
 	.add-to-cart-btn {
 		height: 50px;
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	.compat-tab-btn {
 		padding: 12px 14px;
-		font-size: 11px;
+		font-size: 14px;
 	}
 }
 
