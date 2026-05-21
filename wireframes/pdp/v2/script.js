@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const savingsEl = document.getElementById('price-savings');
 	const stickyPriceEl = document.getElementById('sticky-price');
 	const styleValEl = document.getElementById('val-style');
+	const sizeValEl = document.getElementById('val-size');
 	const accordionHeaders = document.querySelectorAll('.accordion-header');
 	const compatTabBtns = document.querySelectorAll('.compat-tab-btn');
 	const compatPanels = document.querySelectorAll('.compat-panel');
@@ -95,6 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (btn.classList.contains('disabled')) return;
 			sizeOptions.forEach(opt => opt.classList.remove('active'));
 			btn.classList.add('active');
+			
+			// Update label text
+			if (sizeValEl) {
+				const size = btn.dataset.size;
+				sizeValEl.textContent = size.charAt(0).toUpperCase() + size.slice(1);
+			}
 		});
 	});
 
