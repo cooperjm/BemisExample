@@ -62,29 +62,48 @@ ul   { list-style: none; }
 /* ============================================================
    HEADER
    ============================================================ */
+/* ============================================================
+   PROMO STRIP & HEADER
+   ============================================================ */
+.promo-strip {
+    min-height: 40px;
+    padding: 8px 16px;
+    background: var(--navy-deep);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1001;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
 .site-header {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 40px; left: 0; right: 0;
     z-index: 1000;
     background: var(--navy);
-    transition: background-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    transition: top 0.35s var(--ease), background 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 
-.site-header.transparent-header {
-    background: transparent;
-    box-shadow: none;
-}
-
-.site-header.transparent-header.scrolled {
-    background: var(--navy);
-    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+.site-header.scrolled {
+    top: 0;
+    background: rgba(0, 52, 110, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-inner {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 32px;
-    height: 72px;
+    height: 64px;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -97,23 +116,23 @@ ul   { list-style: none; }
 }
 
 .nav-logo img {
-    height: 32px;
+    height: 36px;
     width: auto;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0;
     flex: 1;
 }
 
 .nav-links a {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     padding: 8px 14px;
     border-radius: 6px;
     white-space: nowrap;
@@ -247,7 +266,7 @@ ul   { list-style: none; }
     color: #fff;
     max-width: 860px;
     padding: 0 28px;
-    margin-top: 72px; /* Offset header height */
+    margin-top: 104px; /* Offset header height + promo strip */
 }
 
 .hero-eyebrow {

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('site-header');
     
     const toggleHeaderScroll = () => {
-        if (window.scrollY > 40) {
+        if (window.scrollY > 10) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
