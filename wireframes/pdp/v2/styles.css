@@ -2,8 +2,8 @@
 
 :root {
 	--navy: #00346E;
-	--navy-dark: #051527;
-	--navy-deep: #020C17;
+	--navy-dark: #002042;
+	--navy-deep: #001224;
 	--navy-h: #1C4B8E;
 	--cyan: #00ACF0;
 	--cyan-light: #94D8FF;
@@ -62,82 +62,87 @@ p {
 	top: 31px; /* offset for promo strip */
 	left: 0;
 	right: 0;
-	z-index: 100;
-	background: rgba(2, 12, 23, 0.7);
-	backdrop-filter: blur(20px);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	z-index: 1000;
+	background: var(--navy);
 	transition: all 0.3s var(--ease);
 }
 
 .site-header.is-scrolled {
 	top: 0;
-	background: rgba(2, 12, 23, 0.95);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
 
 .nav-inner {
 	max-width: 1280px;
-	height: 70px;
 	margin: 0 auto;
 	padding: 0 32px;
+	height: 64px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	gap: 40px;
+}
+
+.nav-logo {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
 }
 
 .nav-logo img {
-	height: 24px;
+	height: 36px;
+	width: auto;
 	display: block;
 }
 
 .nav-links {
+	display: flex;
+	align-items: center;
+	gap: 0;
+	flex: 1;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: flex;
-	gap: 28px;
 }
 
 .nav-links a {
-	color: var(--white);
-	text-decoration: none;
-	font-size: 12px;
-	font-weight: 700;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
 	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	opacity: 0.8;
-	transition: opacity 0.2s var(--ease);
+	color: rgba(255, 255, 255, 0.9);
+	padding: 8px 14px;
+	border-radius: 6px;
+	white-space: nowrap;
+	text-decoration: none;
+	transition: background 0.2s ease, color 0.2s ease;
 }
 
 .nav-links a:hover {
-	opacity: 1;
-	color: var(--cyan-light);
+	background: rgba(255, 255, 255, 0.12);
+	color: #fff;
 }
 
 .nav-actions {
 	display: flex;
-	gap: 18px;
+	align-items: center;
+	gap: 2px;
 }
 
-.nav-actions a {
-	color: var(--white);
-	opacity: 0.85;
-	transition: opacity 0.2s var(--ease);
+.nav-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	border-radius: 8px;
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+	transition: background 0.2s ease, color 0.2s ease;
 }
 
-.nav-actions a:hover {
-	opacity: 1;
-	color: var(--cyan-light);
-}
-
-.nav-actions svg {
-	width: 20px;
-	height: 20px;
-	fill: none;
-	stroke: currentColor;
-	stroke-linecap: round;
-	stroke-linejoin: round;
-	stroke-width: 2;
+.nav-icon:hover {
+	background: rgba(255, 255, 255, 0.12);
+	color: #fff;
 }
 
 /* 2. Showroom Hero Section */
@@ -239,6 +244,7 @@ p {
 	position: relative;
 	z-index: 2;
 	transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+	cursor: zoom-in;
 }
 
 .product-render.swapping {
@@ -270,12 +276,12 @@ p {
 }
 .gallery-thumbnails-wrapper::before {
 	left: 0;
-	background: linear-gradient(to right, rgba(5, 21, 39, 0.9) 0%, transparent 100%);
+	background: linear-gradient(to right, rgba(0, 32, 66, 0.9) 0%, transparent 100%);
 	opacity: 0; /* Will toggle dynamically via JS */
 }
 .gallery-thumbnails-wrapper::after {
 	right: 0;
-	background: linear-gradient(to left, rgba(5, 21, 39, 0.9) 0%, transparent 100%);
+	background: linear-gradient(to left, rgba(0, 32, 66, 0.9) 0%, transparent 100%);
 	opacity: 1; /* Shows initially since there is content to scroll right */
 }
 
@@ -1206,7 +1212,7 @@ p {
 	transform: translate(-50%, 120px);
 	z-index: 90;
 	width: min(480px, calc(100vw - 32px));
-	background: rgba(2, 12, 23, 0.82);
+	background: rgba(0, 18, 36, 0.82);
 	backdrop-filter: blur(20px);
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 999px;
@@ -1396,11 +1402,13 @@ p {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
 	.nav-links {
 		display: none;
 	}
+}
 
+@media (max-width: 768px) {
 	.showroom-section {
 		padding-top: 100px;
 		padding-left: 20px;
@@ -1465,3 +1473,139 @@ p {
 		animation-duration: 0.01ms !important;
 	}
 }
+
+/* Lightroom / Lightbox Modal Styles */
+.lightroom-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 2000;
+	background: rgba(0, 18, 36, 0.85);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.4s var(--ease);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lightroom-modal.is-active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.lightroom-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+#lightroom-img {
+	position: fixed;
+	z-index: 2001;
+	object-fit: contain;
+	border-radius: var(--card-radius);
+	cursor: zoom-out;
+	pointer-events: auto;
+	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightroom-close {
+	position: absolute;
+	top: 32px;
+	right: 32px;
+	z-index: 2005;
+	background: none;
+	border: none;
+	color: var(--white);
+	font-size: 44px;
+	line-height: 1;
+	cursor: pointer;
+	padding: 0;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s var(--ease), color 0.3s var(--ease);
+	opacity: 0.8;
+}
+
+.lightroom-close:hover {
+	transform: scale(1.1);
+	color: var(--cyan);
+	opacity: 1;
+}
+
+body.lightroom-open {
+	overflow: hidden;
+}
+
+/* Lightroom / Lightbox Navigation Arrows */
+.lightroom-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2005;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	color: var(--white);
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s var(--ease);
+	opacity: 0.7;
+	outline: none;
+	padding: 0;
+}
+
+.lightroom-arrow:hover {
+	background: rgba(255, 255, 255, 0.12);
+	border-color: var(--cyan);
+	color: var(--cyan-light);
+	opacity: 1;
+	transform: translateY(-50%) scale(1.08);
+}
+
+.lightroom-arrow svg {
+	width: 22px;
+	height: 22px;
+	stroke: currentColor;
+	transition: stroke 0.3s var(--ease);
+}
+
+.lightroom-arrow--prev {
+	left: 32px;
+}
+
+.lightroom-arrow--next {
+	right: 32px;
+}
+
+@media (max-width: 768px) {
+	.lightroom-arrow {
+		width: 44px;
+		height: 44px;
+	}
+	.lightroom-arrow--prev {
+		left: 16px;
+	}
+	.lightroom-arrow--next {
+		right: 16px;
+	}
+	.lightroom-close {
+		top: 16px;
+		right: 16px;
+	}
+}
+
+

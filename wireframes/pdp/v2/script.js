@@ -236,4 +236,233 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		revealEls.forEach(el => observer.observe(el));
 	}
+
+	// 7. Lightroom / Lightbox Zoom Modal (FLIP animation with cycling)
+	const lightroomModal = document.getElementById('lightroom-modal');
+	const lightroomImg = document.getElementById('lightroom-img');
+	const lightroomClose = document.getElementById('lightroom-close');
+	const lightroomPrev = document.getElementById('lightroom-prev');
+	const lightroomNext = document.getElementById('lightroom-next');
+	
+	if (mainProductImg && lightroomModal && lightroomImg && lightroomClose && lightroomPrev && lightroomNext) {
+		let isLightboxActive = false;
+		let currentIndex = 0;
+		
+		// Calculate centered viewport dimensions preserving aspect ratio
+		function getTargetRect(startRect) {
+			const naturalRatio = mainProductImg.naturalWidth / mainProductImg.naturalHeight || startRect.width / startRect.height;
+			
+			// Target max bounds: 85% of screen width and height
+			const maxW = window.innerWidth * 0.85;
+			const maxH = window.innerHeight * 0.85;
+			
+			let targetW = maxW;
+			let targetH = targetW / naturalRatio;
+			
+			if (targetH > maxH) {
+				targetH = maxH;
+				targetW = targetH * naturalRatio;
+			}
+			
+			const targetLeft = (window.innerWidth - targetW) / 2;
+			const targetTop = (window.innerHeight - targetH) / 2;
+			
+			return {
+				left: targetLeft,
+				top: targetTop,
+				width: targetW,
+				height: targetH
+			};
+		}
+		
+		// Recalculate dimensions on window resize if lightbox is open
+		function handleResize() {
+			if (!isLightboxActive) return;
+			const startRect = mainProductImg.getBoundingClientRect();
+			const target = getTargetRect(startRect);
+			
+			lightroomImg.style.transition = 'none';
+			lightroomImg.style.top = `${target.top}px`;
+			lightroomImg.style.left = `${target.left}px`;
+			lightroomImg.style.width = `${target.width}px`;
+			lightroomImg.style.height = `${target.height}px`;
+		}
+		
+		window.addEventListener('resize', handleResize);
+		
+		// Navigate to a specific thumbnail index in the lightbox
+		function navigateToImage(newIndex) {
+			if (!isLightboxActive) return;
+			
+			if (newIndex < 0) newIndex = thumbBtns.length - 1;
+			if (newIndex >= thumbBtns.length) newIndex = 0;
+			currentIndex = newIndex;
+			
+			const nextThumb = thumbBtns[currentIndex];
+			
+			// Update active class on thumbnails & center it
+			thumbBtns.forEach(t => t.classList.remove('active'));
+			nextThumb.classList.add('active');
+			
+			const container = document.querySelector('.gallery-thumbnails');
+			if (container) {
+				const containerWidth = container.offsetWidth;
+				const thumbLeft = nextThumb.offsetLeft;
+				const thumbWidth = nextThumb.offsetWidth;
+				container.scrollTo({
+					left: thumbLeft - (containerWidth / 2) + (thumbWidth / 2),
+					behavior: 'smooth'
+				});
+			}
+			
+			// Update main background page image
+			mainProductImg.src = nextThumb.dataset.full;
+			
+			// Smoothly fade out the lightbox image, swap src, and fade in
+			lightroomImg.style.transition = 'opacity 0.2s var(--ease)';
+			lightroomImg.style.opacity = '0';
+			
+			setTimeout(() => {
+				lightroomImg.src = nextThumb.dataset.full;
+				
+				// Re-calculate target rect for the new image in case of differing natural aspect ratio
+				const currentStartRect = mainProductImg.getBoundingClientRect();
+				const target = getTargetRect(currentStartRect);
+				
+				lightroomImg.style.top = `${target.top}px`;
+				lightroomImg.style.left = `${target.left}px`;
+				lightroomImg.style.width = `${target.width}px`;
+				lightroomImg.style.height = `${target.height}px`;
+				
+				lightroomImg.onload = () => {
+					lightroomImg.style.opacity = '1';
+					// Restore full transition for subsequent operations after short delay
+					setTimeout(() => {
+						lightroomImg.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+					}, 50);
+				};
+				
+				// Fallback
+				setTimeout(() => {
+					lightroomImg.style.opacity = '1';
+					lightroomImg.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+				}, 200);
+				
+			}, 200);
+		}
+		
+		// Open Lightbox
+		mainProductImg.addEventListener('click', () => {
+			if (isLightboxActive) return;
+			isLightboxActive = true;
+			
+			// Sync index with current active thumbnail
+			currentIndex = Array.from(thumbBtns).findIndex(btn => btn.classList.contains('active'));
+			if (currentIndex === -1) currentIndex = 0;
+			
+			// 1. Get initial image dimensions and coordinates
+			const startRect = mainProductImg.getBoundingClientRect();
+			
+			// 2. Setup the zoom image source
+			lightroomImg.src = mainProductImg.src;
+			
+			// 3. Position zoomed image exactly where the thumbnail/main image is currently located
+			lightroomImg.style.transition = 'none';
+			lightroomImg.style.top = `${startRect.top}px`;
+			lightroomImg.style.left = `${startRect.left}px`;
+			lightroomImg.style.width = `${startRect.width}px`;
+			lightroomImg.style.height = `${startRect.height}px`;
+			lightroomImg.style.opacity = '1';
+			
+			// 4. Activate modal overlay
+			lightroomModal.classList.add('is-active');
+			lightroomModal.setAttribute('aria-hidden', 'false');
+			document.body.classList.add('lightroom-open');
+			
+			// 5. Force reflow
+			lightroomImg.offsetWidth;
+			
+			// 6. Calculate target centered state
+			const target = getTargetRect(startRect);
+			
+			// 7. Play the FLIP transition to centered size
+			lightroomImg.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+			lightroomImg.style.top = `${target.top}px`;
+			lightroomImg.style.left = `${target.left}px`;
+			lightroomImg.style.width = `${target.width}px`;
+			lightroomImg.style.height = `${target.height}px`;
+		});
+		
+		// Close Lightbox
+		function closeLightbox() {
+			if (!isLightboxActive) return;
+			isLightboxActive = false;
+			
+			// Get current position of source image (in case scrolled or cycled to a new index)
+			const currentRect = mainProductImg.getBoundingClientRect();
+			
+			// Animate image back to its current page coordinates
+			lightroomImg.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+			lightroomImg.style.top = `${currentRect.top}px`;
+			lightroomImg.style.left = `${currentRect.left}px`;
+			lightroomImg.style.width = `${currentRect.width}px`;
+			lightroomImg.style.height = `${currentRect.height}px`;
+			
+			// Fade out background overlay
+			lightroomModal.classList.remove('is-active');
+			lightroomModal.setAttribute('aria-hidden', 'true');
+			document.body.classList.remove('lightroom-open');
+			
+			// Clean up elements after animation ends
+			function handleTransitionEnd(e) {
+				if (e.target !== lightroomImg) return;
+				
+				lightroomImg.style.transition = 'none';
+				lightroomImg.style.top = '';
+				lightroomImg.style.left = '';
+				lightroomImg.style.width = '';
+				lightroomImg.style.height = '';
+				lightroomImg.src = '';
+				
+				lightroomImg.removeEventListener('transitionend', handleTransitionEnd);
+			}
+			
+			lightroomImg.addEventListener('transitionend', handleTransitionEnd);
+		}
+		
+		// Next / Prev button triggers
+		lightroomPrev.addEventListener('click', (e) => {
+			e.stopPropagation();
+			navigateToImage(currentIndex - 1);
+		});
+		
+		lightroomNext.addEventListener('click', (e) => {
+			e.stopPropagation();
+			navigateToImage(currentIndex + 1);
+		});
+		
+		// Event triggers for closing
+		lightroomClose.addEventListener('click', closeLightbox);
+		lightroomModal.addEventListener('click', (e) => {
+			// Don't close if user clicks the arrow buttons
+			if (e.target.closest('.lightroom-arrow')) return;
+			
+			if (e.target === lightroomModal || e.target === lightroomImg || e.target.classList.contains('lightroom-content')) {
+				closeLightbox();
+			}
+		});
+		
+		// Key listeners (Arrow keys for navigation, Escape for close)
+		window.addEventListener('keydown', (e) => {
+			if (!isLightboxActive) return;
+			
+			if (e.key === 'Escape') {
+				closeLightbox();
+			} else if (e.key === 'ArrowLeft') {
+				navigateToImage(currentIndex - 1);
+			} else if (e.key === 'ArrowRight') {
+				navigateToImage(currentIndex + 1);
+			}
+		});
+	}
 });
