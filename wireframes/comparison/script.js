@@ -86,3 +86,130 @@ if (productImgs.length) {
         imgObserver.observe(img);
     });
 }
+
+
+// ============================================================
+// SHOW ONLY DIFFERENCES — filter comparison table rows
+// ============================================================
+const diffToggle = document.getElementById('show-differences-toggle');
+const compareRows = document.querySelectorAll('.compare-table tbody tr');
+
+if (diffToggle && compareRows.length) {
+    diffToggle.addEventListener('change', (e) => {
+        const isChecked = e.target.checked;
+        
+        compareRows.forEach(row => {
+            const cells = Array.from(row.querySelectorAll('td'));
+            if (cells.length < 6) return; // skip if row format is unexpected
+            
+            const modelCells = cells.slice(1); // skip feature name cell
+            const firstVal = getCellValue(modelCells[0]);
+            
+            const allSame = modelCells.every(cell => getCellValue(cell) === firstVal);
+            
+            if (allSame) {
+                if (isChecked) {
+                    row.style.opacity = '0';
+                    setTimeout(() => {
+                        if (diffToggle.checked) {
+                            row.style.display = 'none';
+                        }
+                    }, 200); // match fade transition
+                } else {
+                    row.style.display = '';
+                    setTimeout(() => {
+                        row.style.opacity = '1';
+                    }, 10);
+                }
+            }
+        });
+    });
+}
+
+function getCellValue(cell) {
+    if (cell.querySelector('.icon-check')) return 'check';
+    if (cell.querySelector('.icon-cross')) return 'cross';
+    return cell.textContent.trim().toLowerCase();
+}
+
+
+// ============================================================
+// CONFIGURATOR OPTIONS — update price simulation on select change
+// ============================================================
+const modelSelects = document.querySelectorAll('.model-select');
+
+if (modelSelects.length) {
+    modelSelects.forEach(select => {
+        select.addEventListener('change', (e) => {
+            const selectEl = e.target;
+            const model = selectEl.getAttribute('data-model');
+            const th = selectEl.closest('th');
+            if (!th) return;
+            
+            let currentPrice = "$199 USD";
+            let originalPrice = "$219 USD";
+            
+            if (model === 'bb-500') {
+                if (selectEl.value === 'round') {
+                    currentPrice = "$189 USD";
+                    originalPrice = "$209 USD";
+                } else {
+                    currentPrice = "$199 USD";
+                    originalPrice = "$219 USD";
+                }
+            } else if (model === 'bb-1000') {
+                if (selectEl.value === 'round') {
+                    currentPrice = "$349 USD";
+                    originalPrice = "$389 USD";
+                } else {
+                    currentPrice = "$359 USD";
+                    originalPrice = "$399 USD";
+                }
+            } else if (model === 'bb-2000') {
+                if (selectEl.value === 'round') {
+                    currentPrice = "$539 USD";
+                    originalPrice = "";
+                } else {
+                    currentPrice = "$549 USD";
+                    originalPrice = "";
+                }
+            }
+            
+            const currentPriceEl = th.querySelector('.current-price');
+            if (currentPriceEl) {
+                currentPriceEl.textContent = currentPrice;
+            }
+            const originalEl = th.querySelector('.price-original');
+            if (originalEl) {
+                originalEl.textContent = originalPrice;
+                originalEl.style.display = originalPrice ? '' : 'none';
+            }
+        });
+    });
+}
+
+
+// ============================================================
+// GLOSSARY SEARCH — filter glossary cards based on input
+// ============================================================
+const glossarySearch = document.getElementById('glossary-search');
+const glossaryCards = document.querySelectorAll('.glossary-card');
+
+if (glossarySearch && glossaryCards.length) {
+    glossarySearch.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        glossaryCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const text = card.querySelector('p').textContent.toLowerCase();
+            const tags = card.getAttribute('data-tags') ? card.getAttribute('data-tags').toLowerCase() : '';
+            
+            if (title.includes(query) || text.includes(query) || tags.includes(query)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
+}
+
