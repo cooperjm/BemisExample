@@ -114,6 +114,9 @@ Replaces traditional round radio buttons or standard input selections. Features 
 - A table utilizing thin separators and high columns.
 - Highlighted columns (like the *Discovery DLS*) are given slightly thicker borders and a background tint (`rgba(0, 172, 240, 0.05)`) to stand out from the rest.
 
+### F. Standard Header and Footer Markup
+All new wireframe pages must import and utilize the identical header and footer HTML markup and CSS classes as defined in `wireframes/comparison/index.html` to maintain visual and functional consistency across all BioBidet landing, collection, product, and blog pages.
+
 ---
 
 ## 5. Animation & Interaction Guidelines
