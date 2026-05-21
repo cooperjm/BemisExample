@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" role="img" aria-labelledby="title desc">
+	<title id="title">Macro detail placeholder</title>
+	<desc id="desc">Macro product detail placeholder for nozzle, water, controls, or heated seat content.</desc>
+	<defs>
+		<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+			<stop offset="0%" stop-color="#eaf7ff"/>
+			<stop offset="100%" stop-color="#94d8ff"/>
+		</linearGradient>
+	</defs>
+	<rect width="760" height="460" fill="url(#bg)"/>
+	<rect x="62" y="126" width="390" height="150" rx="75" fill="#ffffff" opacity=".82"/>
+	<rect x="332" y="190" width="246" height="74" rx="37" fill="#d9eaf3"/>
+	<path d="M520 230c46-6 92 7 140 39" fill="none" stroke="#00346e" stroke-width="12" stroke-linecap="round" opacity=".38"/>
+	<path d="M526 250c48 0 87 16 132 52" fill="none" stroke="#00acf0" stroke-width="8" stroke-linecap="round" opacity=".52"/>
+	<circle cx="246" cy="202" r="24" fill="#00346e"/>
+	<circle cx="246" cy="202" r="10" fill="#00acf0"/>
+	<text x="48" y="360" fill="#00346e" font-family="Lato, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">PLACEHOLDER</text>
+	<text x="48" y="394" fill="#1b2227" font-family="Lato, Arial, sans-serif" font-size="30" font-weight="900">Macro detail image</text>
+	<text x="48" y="424" fill="#1b2227" font-family="Lato, Arial, sans-serif" font-size="16">Nozzle, water stream, controls, or heated seat close-up.</text>
+</svg>

@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.toiletseats.com)",
-      "WebFetch(domain:biobidet.com)"
+      "WebFetch(domain:biobidet.com)",
+      "mcp__Figma__get_metadata",
+      "mcp__795369f6-be13-4e0a-89e7-2d13e0004b69__generate-design"
     ]
   }
 }

@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>BioBidet BB-500 Series | Interactive Showroom v2</title>
+		<!-- Google Fonts: Lato -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+	</head>
+	<body>
+		<div class="promo-strip">SAVE $20 WHEN YOU JOIN THE BIO BIDET HONOR CLUB</div>
+
+		<header
+			class="site-header"
+			id="site-header"
+		>
+			<nav class="nav-inner">
+				<a
+					class="nav-logo"
+					href="#"
+					aria-label="BioBidet home"
+				>
+					<img
+						src="assets/logo.avif"
+						alt="BioBidet by Bemis"
+					/>
+				</a>
+				<ul class="nav-links">
+					<li><a href="#">Bidet Seats</a></li>
+					<li><a href="#">Bidet Attachments</a></li>
+					<li><a href="#">Bidet Toilets</a></li>
+					<li><a href="#">Resource Hub</a></li>
+					<li><a href="#">More</a></li>
+				</ul>
+				<div class="nav-actions">
+					<a
+						href="#"
+						aria-label="Search"
+					>
+						<svg
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+						>
+							<circle
+								cx="11"
+								cy="11"
+								r="7"
+							></circle>
+							<path d="m16.5 16.5 4.5 4.5"></path>
+						</svg>
+					</a>
+					<a
+						href="#"
+						aria-label="Cart"
+					>
+						<svg
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+						>
+							<path d="M6 7h12l-1 13H7L6 7Z"></path>
+							<path d="M9 7a3 3 0 0 1 6 0"></path>
+						</svg>
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Section 1: The Interactive Showroom Hero -->
+			<section class="showroom-section">
+				<div class="showroom-bg">
+					<div class="showroom-glow showroom-glow--left"></div>
+					<div class="showroom-glow showroom-glow--right"></div>
+				</div>
+
+				<div class="showroom-grid">
+					<!-- Left Side: Immersive Studio Stage & Product Gallery -->
+					<div class="showroom-canvas">
+						<div class="stage-halo"></div>
+						
+						<!-- Main Product Render -->
+						<div class="product-stage-container">
+							<img
+								class="product-render"
+								id="main-product-image"
+								src="assets/1.webp"
+								alt="BB-500 Series Bidet Seat Studio View"
+							/>
+						</div>
+
+						<!-- Product Gallery Thumbnails -->
+						<div class="gallery-thumbnails-wrapper">
+							<div class="gallery-thumbnails">
+								<button class="thumb-btn active" data-full="assets/1.webp" aria-label="Gallery Image 1">
+									<img src="assets/1.webp" alt="BB-500 View 1" />
+								</button>
+								<button class="thumb-btn" data-full="assets/2.webp" aria-label="Gallery Image 2">
+									<img src="assets/2.webp" alt="BB-500 View 2" />
+								</button>
+								<button class="thumb-btn" data-full="assets/3.webp" aria-label="Gallery Image 3">
+									<img src="assets/3.webp" alt="BB-500 View 3" />
+								</button>
+								<button class="thumb-btn" data-full="assets/4.webp" aria-label="Gallery Image 4">
+									<img src="assets/4.webp" alt="BB-500 View 4" />
+								</button>
+								<button class="thumb-btn" data-full="assets/5.webp" aria-label="Gallery Image 5">
+									<img src="assets/5.webp" alt="BB-500 View 5" />
+								</button>
+								<button class="thumb-btn" data-full="assets/6.webp" aria-label="Gallery Image 6">
+									<img src="assets/6.webp" alt="BB-500 View 6" />
+								</button>
+								<button class="thumb-btn" data-full="assets/7.webp" aria-label="Gallery Image 7">
+									<img src="assets/7.webp" alt="BB-500 View 7" />
+								</button>
+								<button class="thumb-btn" data-full="assets/8.webp" aria-label="Gallery Image 8">
+									<img src="assets/8.webp" alt="BB-500 View 8" />
+								</button>
+								<button class="thumb-btn" data-full="assets/9.webp" aria-label="Gallery Image 9">
+									<img src="assets/9.webp" alt="BB-500 View 9" />
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Right Side: Configurator Panel -->
+					<div class="configurator-panel">
+						<div class="configurator-header">
+							<span class="badge-chip">Smart Tech Upgrade</span>
+							<h1>BB-500 Series</h1>
+							<p class="configurator-tagline">Reimagining clean as a premium daily ritual.</p>
+							
+							<div class="rating-row">
+								<span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+								<a href="#reviews">4.4 (36 Reviews)</a>
+							</div>
+						</div>
+
+						<!-- Configurator Options -->
+						<div class="configurator-box">
+							<div class="config-group">
+								<div class="config-label-row">
+									<label class="config-label">Model Selection</label>
+									<span class="config-val" id="val-style">BB-500 (Classic)</span>
+								</div>
+								<!-- Custom Segmented Tabs -->
+								<div class="segment-selector style-selector">
+									<button class="segment-option active" data-style="500" data-price="199" data-old-price="219">
+										BB-500 Classic
+									</button>
+									<button class="segment-option" data-style="550" data-price="249" data-old-price="279">
+										BB-550 + Dryer
+									</button>
+									<span class="selection-slider"></span>
+								</div>
+							</div>
+
+							<div class="config-group">
+								<div class="config-label-row">
+									<label class="config-label">Size Option</label>
+									<span class="config-val">Elongated</span>
+								</div>
+								<div class="segment-selector size-selector">
+									<button class="segment-option active">Elongated</button>
+									<button class="segment-option disabled" disabled title="Round size currently out of stock">
+										Round
+									</button>
+									<span class="selection-slider"></span>
+								</div>
+							</div>
+
+							<div class="price-section">
+								<div class="price-row">
+									<span class="price-current" id="current-price">$199.00</span>
+									<span class="price-old" id="old-price">$219.00</span>
+									<span class="save-tag" id="price-savings">Save $20</span>
+								</div>
+								<p class="price-sub">Or finance from <span class="shoppay-text">From $17.96/mo</span> with shopPay</p>
+							</div>
+
+							<ul class="delivery-perks">
+								<li>
+									<svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+									<span>Free shipping over $199</span>
+								</li>
+								<li>
+									<svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+									<span>Estimated Delivery: 2-7 days</span>
+								</li>
+							</ul>
+
+							<button class="add-to-cart-btn">
+								<span class="btn-text">Add to cart</span>
+								<span class="btn-glow"></span>
+							</button>
+
+							<div class="taskrabbit-card">
+								<div class="tr-logo">TaskRabbit</div>
+								<div class="tr-info">
+									<strong>Optional Install Support</strong>
+									<span>Book certified local installation pros at checkout.</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Specs and Details Accordions -->
+						<div class="showroom-accordions">
+							<div class="accordion-item">
+								<button class="accordion-header" aria-expanded="false">
+									<span>Product Overview</span>
+									<svg viewBox="0 0 24 24" class="chevron"><path d="m6 9 6 6 6-6"/></svg>
+								</button>
+								<div class="accordion-content">
+									<p>
+										Elevate your bathroom with warm water, heated seating, and intuitive control selectors. The BB-500 series delivers a fully electronic washing experience that fits standard toilet fixtures.
+									</p>
+								</div>
+							</div>
+
+							<div class="accordion-item">
+								<button class="accordion-header" aria-expanded="false">
+									<span>Full Specifications</span>
+									<svg viewBox="0 0 24 24" class="chevron"><path d="m6 9 6 6 6-6"/></svg>
+								</button>
+								<div class="accordion-content">
+									<ul class="spec-list">
+										<li><span>Rear & Front Wash</span><span>Dual Retractable Nozzles</span></li>
+										<li><span>Warm Water</span><span>Continuous Hybrid Heater</span></li>
+										<li><span>Heated Seat</span><span>3 Temperature Levels</span></li>
+										<li><span>Control System</span><span>Side Arm Console</span></li>
+										<li><span>Dimensions</span><span>20.8" L x 18.5" W x 3.3" H</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section 2: Cinematic Editorial Chapters -->
+			<section class="editorial-story-section">
+				<div class="chapter chapter--dark">
+					<div class="chapter-grid">
+						<div class="chapter-content reveal-left">
+							<span class="chapter-kicker">Infinite Warmth</span>
+							<h2>A new standard for comfort.</h2>
+							<p>
+								No more cold water shocks. Built with our energy-efficient continuous heating core, the BB-500 series ensures your cleansing ritual stays warm, soothing, and perfectly pressurized from the very first drop.
+							</p>
+							<div class="feature-pills-row">
+								<span class="pill-tag">Hybrid Heater</span>
+								<span class="pill-tag">Adjustable Temp</span>
+								<span class="pill-tag">Pulse Mode</span>
+							</div>
+						</div>
+						<div class="chapter-media reveal-right">
+							<div class="media-window">
+								<img src="assets/4.webp" alt="Instant Warm Water Sequence" />
+								<div class="glow-bg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="chapter chapter--light">
+					<div class="chapter-grid chapter-grid--reverse">
+						<div class="chapter-content reveal-right">
+							<span class="chapter-kicker">Low-Profile Staging</span>
+							<h2>Beautifully integrated.</h2>
+							<p>
+								At only 3.3 inches tall, the seat replaces clunky, bulky traditional bidet layouts. Its sleek, sweeping silhouette is designed to align seamlessly with elongated toilet bowls, keeping the aesthetic of your bathroom pure.
+							</p>
+							<div class="feature-pills-row">
+								<span class="pill-tag">3.3" Silhouette</span>
+								<span class="pill-tag">Elongated Fit</span>
+								<span class="pill-tag">Soft-Close Lid</span>
+							</div>
+						</div>
+						<div class="chapter-media reveal-left">
+							<div class="media-window media-window--white">
+								<img src="assets/5.webp" alt="Slim design profile details" />
+								<div class="glow-bg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section 3: Compatibility Studio -->
+			<section class="compatibility-studio" id="compatibility">
+				<div class="section-container">
+					<div class="studio-intro reveal-up">
+						<span class="badge-chip badge-chip--outline">Fit Guide</span>
+						<h2>Compatibility Studio</h2>
+						<p>Ensure a flawless fit. Follow our interactive checkpoints to verify layout compatibility with your bathroom.</p>
+					</div>
+
+					<div class="compat-tabs reveal-up delay-1">
+						<button class="compat-tab-btn active" data-tab="toilet-fit">Toilet Fit</button>
+						<button class="compat-tab-btn" data-tab="toilet-type">Toilet Type</button>
+						<button class="compat-tab-btn" data-tab="electricity">Electricity</button>
+					</div>
+
+					<div class="compat-panels reveal-up delay-2">
+						<!-- Panel 1: Toilet Fit -->
+						<div class="compat-panel active" id="tab-toilet-fit">
+							<div class="panel-layout">
+								<div class="panel-visual">
+									<img src="assets/placeholder-fit.svg" alt="How to measure toilet size" />
+								</div>
+								<div class="panel-info">
+									<h3>Is your toilet Round or Elongated?</h3>
+									<p>
+										Measure from the center of the bolt holes to the very front edge of the toilet bowl.
+									</p>
+									<ul class="compat-metrics">
+										<li><span>Elongated (Fits)</span><span>18.5" or longer</span></li>
+										<li><span>Round (Out of Stock)</span><span>16.5" to 17.5"</span></li>
+									</ul>
+									<p class="alert-info-text">
+										Note: Round style is currently unavailable. Elongated fixtures are fully supported.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Panel 2: Toilet Type -->
+						<div class="compat-panel" id="tab-toilet-type">
+							<div class="panel-layout">
+								<div class="panel-visual">
+									<img src="assets/placeholder-product.svg" alt="Compatible toilet bowl types" />
+								</div>
+								<div class="panel-info">
+									<h3>One-Piece vs. Two-Piece Compatibility</h3>
+									<p>
+										The BB-500 fits all standard two-piece toilets and most modern one-piece toilets.
+									</p>
+									<div class="spec-comparison">
+										<div class="comp-box matches">
+											<strong>Fits</strong>
+											<span>Standard flat bowls, French curve bowls with 2"+ clearance</span>
+										</div>
+										<div class="comp-box misses">
+											<strong>May Not Fit</strong>
+											<span>Toilets with extreme curvature or integrated rear control tanks</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Panel 3: Electricity -->
+						<div class="compat-panel" id="tab-electricity">
+							<div class="panel-layout">
+								<div class="panel-visual">
+									<img src="assets/placeholder-review.svg" alt="GFCI Electrical outlet guide" />
+								</div>
+								<div class="panel-info">
+									<h3>GFCI Outlet Required</h3>
+									<p>
+										To power the heated seat, water warmer, and electronic controls, you will need a 120V GFCI outlet located within 4 feet of the toilet bowl.
+									</p>
+									<div class="outlet-warning">
+										<strong>Cord Specifications</strong>
+										<p>The standard power cord is 4 feet long and extends from the right-hand side of the unit (facing the toilet).</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section 4: Reviews Section -->
+			<section class="reviews-section" id="reviews">
+				<div class="section-container">
+					<div class="reviews-header reveal-up">
+						<h2>From Our Customers</h2>
+						<p>Real experiences from people who upgraded their bathroom daily rituals.</p>
+					</div>
+
+					<div class="reviews-grid">
+						<div class="review-card reveal-up">
+							<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<h3>A total game changer</h3>
+							<p>"I previously had a non-electric bidet attachment, but the heated seat and instant warm water features of the BB-500 series are absolutely worth the upgrade. Setup was completed in 15 minutes."</p>
+							<span class="reviewer">— MioFarrengal</span>
+						</div>
+
+						<div class="review-card reveal-up delay-1">
+							<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<h3>Best upgrade I've ever made</h3>
+							<p>"Perfect temperature control and a low profile that fits my modern bathroom aesthetic perfectly. I was skeptical about the power cord, but it blends in beautifully."</p>
+							<span class="reviewer">— Sung</span>
+						</div>
+
+						<div class="review-card reveal-up delay-2">
+							<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+							<h3>Highly recommend</h3>
+							<p>"Warm seat, adjustable water pressure, and a sleek layout. BioBidet made this extremely easy to install. Absolute recommendation!"</p>
+							<span class="reviewer">— Acurate</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Floating Sticky Bar -->
+		<aside class="sticky-buy-bar" id="sticky-buy">
+			<div class="sticky-inner">
+				<div class="sticky-prod-info">
+					<strong>BB-500 Series</strong>
+					<span id="sticky-price">$199.00</span>
+				</div>
+				<button class="sticky-cart-btn">Add to cart</button>
+			</div>
+		</aside>
+
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<div class="footer-col footer-brand">
+					<img
+						src="assets/logo.avif"
+						alt="BioBidet"
+						class="footer-logo"
+					/>
+					<p>Pioneering the future of toilet clean tech since 2008.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Bidet Seats</h4>
+					<a href="#">BB-1000</a>
+					<a href="#">BB-1200</a>
+					<a href="#">BB-2000</a>
+					<a href="#">Discovery DLS</a>
+				</div>
+				<div class="footer-col">
+					<h4>Attachments</h4>
+					<a href="#">Essential attachments</a>
+					<a href="#">Non-electric bidets</a>
+					<a href="#">Travel bidets</a>
+				</div>
+				<div class="footer-col">
+					<h4>Customer Service</h4>
+					<a href="#">Track Order</a>
+					<a href="#">Warranty Registry</a>
+					<a href="#">Help Center</a>
+					<a href="#">Contact Support</a>
+				</div>
+			</div>
+			<div class="copyright">
+				&copy; 2026 BioBidet by Bemis. All rights reserved.
+			</div>
+		</footer>
+
+		<!-- Lightroom / Lightbox Modal -->
+		<div id="lightroom-modal" class="lightroom-modal" aria-hidden="true" role="dialog" aria-label="Product Image Studio Zoom">
+			<button class="lightroom-close" id="lightroom-close" aria-label="Close Modal">&times;</button>
+			<div class="lightroom-content">
+				<img id="lightroom-img" src="" alt="High-Resolution Zoomed View" />
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

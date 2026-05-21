@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" role="img" aria-labelledby="title desc">
+	<title id="title">Lifestyle image placeholder</title>
+	<desc id="desc">Full bleed lifestyle media placeholder for a premium bathroom scene.</desc>
+	<defs>
+		<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+			<stop offset="0%" stop-color="#051527"/>
+			<stop offset="58%" stop-color="#00346e"/>
+			<stop offset="100%" stop-color="#1b2227"/>
+		</linearGradient>
+		<radialGradient id="cyan" cx="20%" cy="74%" r="45%">
+			<stop offset="0%" stop-color="#00acf0" stop-opacity=".28"/>
+			<stop offset="100%" stop-color="#00acf0" stop-opacity="0"/>
+		</radialGradient>
+	</defs>
+	<rect width="1440" height="760" fill="url(#bg)"/>
+	<rect width="1440" height="760" fill="url(#cyan)"/>
+	<rect x="106" y="118" width="520" height="390" rx="10" fill="#fff" opacity=".08"/>
+	<rect x="170" y="202" width="392" height="246" rx="8" fill="#fff" opacity=".12"/>
+	<rect x="720" y="104" width="560" height="460" rx="28" fill="#fff" opacity=".08"/>
+	<ellipse cx="990" cy="372" rx="190" ry="150" fill="#fff" opacity=".18"/>
+	<ellipse cx="990" cy="372" rx="104" ry="66" fill="#051527" opacity=".62"/>
+	<line x1="0" y1="604" x2="1440" y2="604" stroke="#94d8ff" stroke-opacity=".2" stroke-width="2"/>
+	<text x="96" y="612" fill="#94d8ff" font-family="Lato, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">PLACEHOLDER</text>
+	<text x="96" y="654" fill="#fff" font-family="Lato, Arial, sans-serif" font-size="42" font-weight="900">Full-bleed lifestyle photo or video</text>
+	<text x="96" y="692" fill="#dff4ff" font-family="Lato, Arial, sans-serif" font-size="20">Use a dark bathroom scene with product in context.</text>
+</svg>

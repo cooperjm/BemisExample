@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" role="img" aria-labelledby="title desc">
+	<title id="title">Review proof image placeholder</title>
+	<desc id="desc">Placeholder image for social proof and customer review media.</desc>
+	<rect width="760" height="460" fill="#f6f9fc"/>
+	<rect x="72" y="82" width="616" height="296" rx="28" fill="#fff" stroke="#e6e7e8" stroke-width="2"/>
+	<text x="120" y="162" fill="#00346e" font-family="Lato, Arial, sans-serif" font-size="26" font-weight="900" letter-spacing="6">★★★★★</text>
+	<text x="120" y="220" fill="#1b2227" font-family="Lato, Arial, sans-serif" font-size="34" font-weight="900">Customer proof image</text>
+	<text x="120" y="262" fill="#777b7a" font-family="Lato, Arial, sans-serif" font-size="20">Drop testimonial media, UGC, or press proof here.</text>
+	<circle cx="608" cy="294" r="44" fill="#00346e"/>
+	<circle cx="608" cy="294" r="18" fill="#94d8ff"/>
+</svg>

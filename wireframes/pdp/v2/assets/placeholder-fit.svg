@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" role="img" aria-labelledby="title desc">
+	<title id="title">Compatibility graphic placeholder</title>
+	<desc id="desc">Placeholder for toilet fit, toilet type, and electrical compatibility graphics.</desc>
+	<rect width="760" height="460" fill="#00346e"/>
+	<circle cx="650" cy="48" r="190" fill="#1c4b8e" opacity=".48"/>
+	<circle cx="134" cy="396" r="190" fill="#00acf0" opacity=".16"/>
+	<g fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round">
+		<path d="M196 138h166c34 0 62 28 62 62v0c0 34-28 62-62 62H196z"/>
+		<path d="M196 282h218"/>
+		<path d="M492 126v222"/>
+		<path d="M548 174h74"/>
+		<path d="M548 300h74"/>
+	</g>
+	<circle cx="636" cy="174" r="18" fill="#94d8ff"/>
+	<circle cx="636" cy="300" r="18" fill="#94d8ff"/>
+	<text x="56" y="360" fill="#94d8ff" font-family="Lato, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">PLACEHOLDER</text>
+	<text x="56" y="394" fill="#fff" font-family="Lato, Arial, sans-serif" font-size="30" font-weight="900">Fit and compatibility graphic</text>
+	<text x="56" y="424" fill="#dff4ff" font-family="Lato, Arial, sans-serif" font-size="16">Use for measurements, toilet type, or outlet requirements.</text>
+</svg>

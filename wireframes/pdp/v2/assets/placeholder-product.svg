@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+	<title id="title">Product image placeholder</title>
+	<desc id="desc">Cinematic placeholder for a BB-500 bidet product render.</desc>
+	<defs>
+		<radialGradient id="glow" cx="50%" cy="42%" r="62%">
+			<stop offset="0%" stop-color="#94d8ff" stop-opacity=".36"/>
+			<stop offset="70%" stop-color="#00346e" stop-opacity=".08"/>
+			<stop offset="100%" stop-color="#051527" stop-opacity="0"/>
+		</radialGradient>
+		<linearGradient id="seat" x1="20%" x2="85%" y1="10%" y2="95%">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="55%" stop-color="#edf4f8"/>
+			<stop offset="100%" stop-color="#cfdce6"/>
+		</linearGradient>
+	</defs>
+	<rect width="900" height="680" fill="#051527"/>
+	<circle cx="470" cy="320" r="360" fill="url(#glow)"/>
+	<ellipse cx="458" cy="548" rx="310" ry="54" fill="#000" opacity=".24"/>
+	<ellipse cx="520" cy="215" rx="155" ry="238" fill="url(#seat)" opacity=".96"/>
+	<rect x="245" y="322" width="420" height="92" rx="44" fill="url(#seat)"/>
+	<ellipse cx="454" cy="410" rx="275" ry="142" fill="url(#seat)"/>
+	<ellipse cx="454" cy="420" rx="152" ry="72" fill="#10243a"/>
+	<rect x="630" y="395" width="120" height="58" rx="29" fill="#f7fbff"/>
+	<circle cx="690" cy="424" r="15" fill="#00acf0"/>
+	<path d="M395 75c48 83 51 185 12 302" fill="none" stroke="#94d8ff" stroke-width="18" stroke-linecap="round" opacity=".38"/>
+	<text x="74" y="94" fill="#94d8ff" font-family="Lato, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">PLACEHOLDER</text>
+	<text x="74" y="130" fill="#fff" font-family="Lato, Arial, sans-serif" font-size="34" font-weight="900">Large BB-500 product render</text>
+	<text x="74" y="170" fill="#cfefff" font-family="Lato, Arial, sans-serif" font-size="18">Drop final isolated product image here.</text>
+</svg>
