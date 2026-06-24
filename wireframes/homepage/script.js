@@ -272,12 +272,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIdx = 0;
             }
 
-            // Calculate card width and gap dynamically from the track's layout
-            const cardWidth = sliderCards[0].offsetWidth;
-            const gap = 24; // matches the CSS gap
-            
-            // Compute transform offset
-            const offset = currentIdx * (cardWidth + gap);
+            const firstCardRect = sliderCards[0].getBoundingClientRect();
+            const secondCardRect = sliderCards[1]?.getBoundingClientRect();
+            const cardStep = secondCardRect
+                ? secondCardRect.left - firstCardRect.left
+                : firstCardRect.width;
+
+            const offset = currentIdx * cardStep;
             sliderTrack.style.transform = `translateX(-${offset}px)`;
 
             // Update disabled button states

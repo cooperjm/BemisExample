@@ -825,12 +825,13 @@ img {
 	background: var(--white);
 	border: 1px solid var(--light);
 	border-radius: var(--card-radius);
-	padding: 24px;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
 	transition: all 0.4s var(--ease);
 	position: relative;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .product-slider-card::before {
@@ -869,18 +870,19 @@ img {
 	place-items: center;
 	margin-bottom: 20px;
 	overflow: hidden;
-	background: var(--mist);
-	border-radius: 16px;
+	background: var(--white);
+	border-radius: 0;
 	position: relative;
 }
 
 .product-slider-card--highlight .product-card-image {
-	background: rgba(255, 255, 255, 0.04);
+	background: var(--white);
 }
 
 .product-slider-card .product-card-image img {
-	max-height: 85%;
-	width: auto;
+	width: 100%;
+	height: 100%;
+	padding: 18px;
 	object-fit: contain;
 	transition: transform 0.6s var(--ease);
 }
@@ -895,6 +897,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	padding: 0 24px 24px;
 }
 
 .product-card-name {
@@ -1483,12 +1486,13 @@ img {
 .support-card {
 	background: var(--white);
 	border-radius: var(--card-radius);
-	padding: 36px;
+	padding: 18px 18px 32px;
 	text-align: center;
 	transition: all 0.4s var(--ease);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow: hidden;
 }
 
 .support-card:hover {
@@ -1496,29 +1500,25 @@ img {
 	box-shadow: 0 16px 36px rgba(0, 52, 110, 0.06);
 }
 
-.support-card-icon {
-	width: 64px;
-	height: 64px;
-	background: var(--mist);
-	border-radius: 20px;
-	display: grid;
-	place-items: center;
-	color: var(--navy);
-	margin-bottom: 24px;
-	transition: background 0.3s ease, color 0.3s ease;
-}
-
-.support-card:hover .support-card-icon {
+.support-card-media {
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 18px;
+	overflow: hidden;
 	background: var(--navy);
-	color: var(--white);
+	margin-bottom: 28px;
 }
 
-.support-card-icon svg {
-	width: 28px;
-	height: 28px;
-	stroke: currentColor;
-	stroke-width: 1.8;
-	fill: none;
+.support-card-media img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	transition: transform 0.6s var(--ease);
+}
+
+.support-card:hover .support-card-media img {
+	transform: scale(1.04);
 }
 
 .support-card-title {
@@ -1534,10 +1534,11 @@ img {
 	line-height: 1.6;
 	margin-bottom: 28px;
 	flex: 1;
+	padding: 0 18px;
 }
 
 .support-card .btn {
-	width: 100%;
+	width: calc(100% - 36px);
 }
 
 /* ============================================================
