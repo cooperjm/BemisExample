@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "comparison",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", ".", "-p", "3500", "--no-clipboard"],
+      "port": 3500
+    }
+  ]
+}

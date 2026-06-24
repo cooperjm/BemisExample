@@ -30,3 +30,12 @@ Tasks skipped during static wireframe updates because they belong in Shopify sec
 - Add Shopify editor controls for the homepage reviews section background color.
 - Include text/card color controls if needed for contrast when the background changes.
 - Defer final brand color selection until Katharine supplies the approved hex code.
+
+## Comparison Chart
+
+### Task 9 - Comparison Chart: Finalize Color Scheme (BLOCKED — awaiting Katharine)
+
+- Katharine Kuhn needs to supply approved brand hex codes before colors can be locked in.
+- Once received, replace the current placeholder blue tint (`rgba(0, 172, 240, …)`) row and highlight colors with the correct brand values.
+- Spen's direction: the highlight color becomes the default row background; the beige/off-white either becomes the new highlight or is removed.
+- Also applies to Task 7 (homepage reviews background) — same hex codes needed.

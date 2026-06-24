@@ -127,9 +127,9 @@ if (diffToggle && compareRows.length) {
 }
 
 function getCellValue(cell) {
-    if (cell.querySelector('.icon-check')) return 'check';
-    if (cell.querySelector('.icon-cross')) return 'cross';
-    return cell.textContent.trim().toLowerCase();
+    if (cell.querySelector('.dot-present')) return 'present';
+    const text = cell.textContent.trim().toLowerCase();
+    return text === '' ? 'absent' : text;
 }
 
 
