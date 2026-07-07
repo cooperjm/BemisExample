@@ -386,6 +386,9 @@ Same as Task 2 (homepage shoppable cards): remove the off-white background from 
 - True white or fully transparent background — no off-white  
 - This creates a cleaner, more modern grid appearance
 
+**Completed:**  
+Changed `.card-visual-wrapper` in `wireframes/collections/styles.css` from the beige/mist gradient background to solid white, and removed the now-unnecessary border-bottom divider, so product images sit flush against the same white as the rest of the card — matching the Task 2 homepage treatment. List-view layout (which overrides visual-wrapper sizing separately) is unaffected.
+
 ---
 
 ## 📝 BLOG PAGE
