@@ -467,6 +467,270 @@
             letter-spacing: 0.05em;
         }
 
+        /* ============================================================
+           CHECKLIST STATUS DASHBOARD
+           ============================================================ */
+        .status-container {
+            position: relative;
+            z-index: 5;
+            padding: 2rem 5% 8rem;
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .status-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .status-header .hero-kicker {
+            animation: none;
+            opacity: 1;
+            transform: none;
+        }
+
+        .status-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 0.6rem 0 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .status-header p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .status-header p a {
+            color: var(--light-cyan);
+        }
+
+        /* Summary stat row */
+        .status-stats {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 1.1rem 0.8rem;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .stat-card .stat-num {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .stat-card--done .stat-num { color: #34d399; }
+        .stat-card--progress .stat-num { color: var(--cyan); }
+        .stat-card--dev .stat-num { color: #95bf47; }
+        .stat-card--pending .stat-num { color: #c084fc; }
+        .stat-card--todo .stat-num { color: var(--text-muted); }
+        .stat-card--clarify .stat-num { color: #f472b6; }
+
+        .status-legend-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 640px;
+            margin: -1.4rem auto 2.5rem;
+        }
+
+        .status-legend-note code {
+            color: var(--text-secondary);
+        }
+
+        /* Status badge chips */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px 4px 8px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            font-family: var(--font-display);
+        }
+
+        .status-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+
+        .status-badge--done {
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid rgba(52, 211, 153, 0.25);
+        }
+
+        .status-badge--design {
+            color: var(--light-cyan);
+            background: rgba(0, 172, 240, 0.1);
+            border: 1px solid rgba(0, 172, 240, 0.25);
+        }
+
+        .status-badge--dev {
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+
+        .status-badge--pending {
+            color: #c084fc;
+            background: rgba(192, 132, 252, 0.1);
+            border: 1px solid rgba(192, 132, 252, 0.25);
+        }
+
+        .status-badge--todo {
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .status-badge--clarify {
+            color: #f472b6;
+            background: rgba(244, 114, 182, 0.1);
+            border: 1px solid rgba(244, 114, 182, 0.25);
+        }
+
+        /* Secondary marker: routed to Shopify theme conversion (per Shopify_Todo.md) */
+        .shopify-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 9px 4px 7px;
+            border-radius: 20px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            font-family: var(--font-display);
+            color: #95bf47;
+            background: rgba(149, 191, 71, 0.1);
+            border: 1px solid rgba(149, 191, 71, 0.3);
+        }
+
+        .status-row-badges {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        /* Grouped task list */
+        .status-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .status-group {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .status-group-title {
+            padding: 1.1rem 1.5rem;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--light-cyan);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .status-row {
+            display: grid;
+            grid-template-columns: 2.5rem 1fr auto auto;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .status-row:last-child {
+            border-bottom: none;
+        }
+
+        .status-row-num {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .status-row-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .status-row-priority {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 900px) {
+            .status-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .status-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .status-row {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+            }
+
+            .status-row-num {
+                display: none;
+            }
+        }
+
         /* Keyframes */
         @keyframes fadeInUp {
             from {
@@ -682,6 +946,250 @@
                         </div>
                     </div>
                 </a>
+
+            </div>
+        </section>
+
+        <!-- CHECKLIST STATUS DASHBOARD -->
+        <section class="status-container" id="status">
+            <div class="status-header">
+                <span class="hero-kicker">Ringo Web &amp; SEO Status Call &mdash; June 10, 2026</span>
+                <h2>Website Edit Checklist Status</h2>
+                <p>
+                    Live progress against the 22 items in
+                    <code>notes/BioBidet_Website_Edit_Checklist.md</code>. Updated as wireframe work lands &mdash;
+                    see that file for full details, timestamps, and notes on each task.
+                </p>
+            </div>
+
+            <div class="status-stats">
+                <div class="stat-card stat-card--done">
+                    <span class="stat-num">12</span>
+                    <span class="stat-label">Done</span>
+                </div>
+                <div class="stat-card stat-card--progress">
+                    <span class="stat-num">3</span>
+                    <span class="stat-label">Design Done</span>
+                </div>
+                <div class="stat-card stat-card--todo">
+                    <span class="stat-num">6</span>
+                    <span class="stat-label">Not Started</span>
+                </div>
+                <div class="stat-card stat-card--pending">
+                    <span class="stat-num">0</span>
+                    <span class="stat-label">Pending Client</span>
+                </div>
+                <div class="stat-card stat-card--clarify">
+                    <span class="stat-num">1</span>
+                    <span class="stat-label">Needs Input</span>
+                </div>
+                <div class="stat-card stat-card--dev">
+                    <span class="stat-num">9</span>
+                    <span class="stat-label">→ Shopify Conversion</span>
+                </div>
+            </div>
+            <p class="status-legend-note">
+                <span class="shopify-tag">Shopify</span>
+                marks tasks tracked in <code>notes/Shopify_Todo.md</code> — work that requires the live Shopify
+                theme/editor rather than the static wireframe, so it overlaps with the status columns above rather
+                than adding to them.
+            </p>
+
+            <div class="status-groups">
+
+                <!-- HOMEPAGE -->
+                <div class="status-group">
+                    <div class="status-group-title">Homepage</div>
+                    <div class="status-row">
+                        <span class="status-row-num">01</span>
+                        <span class="status-row-title">Slider overlay toggle (on/off, hex color)</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--todo">To be done in Shopify</span>
+                        </span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">02</span>
+                        <span class="status-row-title">Shoppable cards: image fills full card</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">03</span>
+                        <span class="status-row-title">All widgets editable in Shopify editor</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--todo">To be done in Shopify</span>
+                        </span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">04</span>
+                        <span class="status-row-title">"Types of Bidets": lifestyle images</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">05</span>
+                        <span class="status-row-title">DIY Install: step numbers link to YouTube timecodes</span>
+                        <span class="status-row-priority">Nice to Have</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--todo">To be done in Shopify</span>
+                        </span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">06</span>
+                        <span class="status-row-title">Size quiz: replace icons with larger images</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">07</span>
+                        <span class="status-row-title">Reviews section: update background color</span>
+                        <span class="status-row-priority">Pending Info</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--todo">To be done in Shopify</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- COMPARISON CHART -->
+                <div class="status-group">
+                    <div class="status-group-title">Comparison Chart</div>
+                    <div class="status-row">
+                        <span class="status-row-num">08</span>
+                        <span class="status-row-title">Product images at top of each column</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">09</span>
+                        <span class="status-row-title">Rework color scheme (highlight/background swap)</span>
+                        <span class="status-row-priority">Pending Info</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--done">Done</span>
+                        </span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">10</span>
+                        <span class="status-row-title">Minimalist dots instead of checkmarks/X's</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">11</span>
+                        <span class="status-row-title">Build as reusable droppable widget</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--todo">To be done in Shopify</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- GLOSSARY -->
+                <div class="status-group">
+                    <div class="status-group-title">Glossary of Features</div>
+                    <div class="status-row">
+                        <span class="status-row-num">12</span>
+                        <span class="status-row-title">Add icons to each glossary entry</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                </div>
+
+                <!-- PRODUCT PAGE -->
+                <div class="status-group">
+                    <div class="status-group-title">Product Page</div>
+                    <div class="status-row">
+                        <span class="status-row-num">13</span>
+                        <span class="status-row-title">White above-the-fold background + font fixes</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">14</span>
+                        <span class="status-row-title">Size icons in variation selector</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">15</span>
+                        <span class="status-row-title">Toggleable coupon/discount checkbox</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--design">Design Done</span>
+                        </span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">16</span>
+                        <span class="status-row-title">"Write a Review" button near star rating</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--design">Design Done</span>
+                        </span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">17</span>
+                        <span class="status-row-title">Clickable text updates main product image</span>
+                        <span class="status-row-priority">Nice to Have</span>
+                        <span class="status-badge status-badge--clarify">Needs Input</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">18</span>
+                        <span class="status-row-title">Bazaarvoice reviews accordion</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-row-badges">
+                            <span class="shopify-tag">Shopify</span>
+                            <span class="status-badge status-badge--todo">To be done in Shopify</span>
+                        </span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-row-num">19</span>
+                        <span class="status-row-title">"Product Resources" accordion</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--design">Design Done</span>
+                    </div>
+                </div>
+
+                <!-- COLLECTION PAGE -->
+                <div class="status-group">
+                    <div class="status-group-title">Collection Page (Grid)</div>
+                    <div class="status-row">
+                        <span class="status-row-num">20</span>
+                        <span class="status-row-title">Product image fills full card</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                </div>
+
+                <!-- BLOG -->
+                <div class="status-group">
+                    <div class="status-group-title">Blog Page</div>
+                    <div class="status-row">
+                        <span class="status-row-num">21</span>
+                        <span class="status-row-title">Fix "scroll to read" text</span>
+                        <span class="status-row-priority">Must Have</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                </div>
+
+                <!-- PENDING FROM CLIENT -->
+                <div class="status-group">
+                    <div class="status-group-title">Pending From Client</div>
+                    <div class="status-row">
+                        <span class="status-row-num">22</span>
+                        <span class="status-row-title">Receive brand fonts + hex color codes from Katherine</span>
+                        <span class="status-row-priority">Blocking</span>
+                        <span class="status-badge status-badge--done">Done</span>
+                    </div>
+                </div>
 
             </div>
         </section>

@@ -28,6 +28,7 @@ Tasks skipped during static wireframe updates because they belong in Shopify sec
 ### Task 7 - Reviews Section: Configurable Background Color
 
 - Add Shopify editor controls for the homepage reviews section background color.
+- Specifically: a background color picker for the `.review-card` testimonial cards in the "From Our Customers" section, so the client can adjust it without a developer.
 - Include text/card color controls if needed for contrast when the background changes.
 - Defer final brand color selection until Katharine supplies the approved hex code.
 
@@ -35,10 +36,16 @@ Tasks skipped during static wireframe updates because they belong in Shopify sec
 
 ### Task 9 - Comparison Chart: Finalize Color Scheme (BLOCKED — awaiting Katharine)
 
-- Katharine Kuhn needs to supply approved brand hex codes before colors can be locked in.
-- Once received, replace the current placeholder blue tint (`rgba(0, 172, 240, …)`) row and highlight colors with the correct brand values.
-- Spen's direction: the highlight color becomes the default row background; the beige/off-white either becomes the new highlight or is removed.
+- Static wireframe rework is done: the highlight color is now the default row background, with the beige/off-white removed per Spen's direction.
+- Add Shopify editor color pickers for the chart's row/highlight colors so they can be changed without a developer.
+- Katharine Kuhn still needs to supply approved brand hex codes before the final color values can be locked in — swap the current placeholder blue tint (`rgba(0, 172, 240, …)`) for the correct brand values once received.
 - Also applies to Task 7 (homepage reviews background) — same hex codes needed.
+
+### Task 11 - Comparison Chart: Build as Reusable Droppable Widget
+
+- The static wireframe (`wireframes/comparison`) builds one fixed instance of the chart with a set list of products/rows.
+- Convert it into a Shopify section/block that editors can drop onto any page (collection, homepage, etc.).
+- Expose editor settings for which products to display and how many feature rows to show per placement, so a condensed version (e.g. homepage) and a fuller version (collection page) can share the same section code.
 
 ## Product Page
 

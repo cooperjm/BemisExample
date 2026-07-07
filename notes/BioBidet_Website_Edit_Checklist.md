@@ -87,6 +87,9 @@ Replace the current placeholder images in the "Types of Bidets" category section
 - Images will be provided by the Bemis/Bio Bidet team  
 - Each category card should have its own distinct lifestyle photo
 
+**Completed:**  
+Replaced the placeholder art in the homepage "Types of Bidets" section with real lifestyle photos (`attachments_web.webp`, `bidet-toilet-seat_web.webp`, `smart-bidet_web.webp`) — each category card now has its own distinct image.
+
 ---
 
 ### ✅ Task 5 — DIY Install Widget: Step Numbers Link to YouTube Timecodes
@@ -119,6 +122,9 @@ In the toilet seat size compatibility quiz widget, replace the small icons with 
 - Reference the existing homepage for the diagram style currently used (elongated and round size illustrations)  
 - The intent is to give customers enough visual context to self-identify their seat shape without reading extra copy  
 - Images should be clear and sized generously within the widget
+
+**Completed:**  
+Small icons in the size compatibility quiz widget were swapped for larger elongated/round reference images.
 
 ---
 
@@ -171,6 +177,9 @@ Swap the highlight and background colors in the comparison chart so the current 
 - Spen's preference: the current highlight should just be the default background  
 - Final colors must align with brand hex codes from Katharine (see Task 21\)  
 - The chart will also need to work on both the collection page and homepage if used in both places
+
+**Completed:**  
+Swapped the comparison chart's color scheme so the former highlight color is now the default row background, with the off-white/beige removed. Final brand hex values and an editor-configurable color picker are tracked in `Shopify_Todo.md` pending Katharine's brand colors.
 
 ---
 
@@ -429,6 +438,9 @@ Wait for Katharine Kuhn to send over brand font preferences and hex color codes 
 - These will inform: reviews section background (Task 7), comparison chart colors (Task 9), and any other brand-aligned color decisions  
 - Goal is to remain consistent across the Bemis and Bio Bidet brands  
 - Do not finalize colors on any section until this is received
+
+**Completed:**  
+Brand fonts and hex color codes received from Katharine. This unblocks the final color values for Task 7 (reviews section background) and Task 9 (comparison chart colors) — see `Shopify_Todo.md` for the remaining Shopify-side work on those.
 
 ---
 
