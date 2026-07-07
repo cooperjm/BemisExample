@@ -39,3 +39,24 @@ Tasks skipped during static wireframe updates because they belong in Shopify sec
 - Once received, replace the current placeholder blue tint (`rgba(0, 172, 240, …)`) row and highlight colors with the correct brand values.
 - Spen's direction: the highlight color becomes the default row background; the beige/off-white either becomes the new highlight or is removed.
 - Also applies to Task 7 (homepage reviews background) — same hex codes needed.
+
+## Product Page
+
+### Task 15 - Coupon/Discount Toggle: Per-Listing Visibility + Checkout Logic
+
+- The static wireframe (`wireframes/pdp/v2`) only builds the visual design of the coupon/discount toggle — it is always rendered and defaults to checked.
+- Add a Shopify editor setting (product metafield or section/block setting) so this element can be shown/hidden per product listing, since it should only appear on listings where a discount is actually offered.
+- Wire the toggle to real checkout behavior: when checked, the discount code should be applied automatically at checkout; when unchecked, it should not apply.
+- The "Code CLEANBUNDLE" copy is a placeholder — the discount code and savings copy should pull from the product/metafield configuration rather than being hardcoded.
+
+### Task 16 - "Write a Review" Button: Wire Up Functionality
+
+- The static wireframe (`wireframes/pdp/v2`) only builds the visual design of the "Write a Review" button next to the star rating — it is inert (`<button type="button">` with no action).
+- Wire the button to open/scroll to the actual review-submission flow (e.g. the Bazaarvoice "write a review" form/modal) once that integration is in place.
+
+### Task 18 - Bazaarvoice Reviews Accordion at Bottom of Product Page
+
+- Requires the actual Bazaarvoice code embed (carousel/reviews widget) — Spen to provide access/credentials.
+- Build a collapsible accordion (collapsed by default) at the bottom of the product page to contain the embed.
+- Place it BELOW the highlighted standout review cards, which stay visible and uncollapsed.
+- Deferred entirely to Shopify/theme implementation since it depends on the live Bazaarvoice embed rather than static markup.

@@ -6,7 +6,15 @@
       "mcp__Figma__get_metadata",
       "mcp__795369f6-be13-4e0a-89e7-2d13e0004b69__generate-design",
       "mcp__Claude_Preview__preview_start",
-      "WebFetch(domain:www.apple.com)"
+      "WebFetch(domain:www.apple.com)",
+      "Read(//private/tmp/**)",
+      "Bash(npx --yes playwright@1.61.1 install chromium --with-deps)",
+      "Bash(node shot.js)",
+      "Bash(lsof -ti:8934)",
+      "Bash(xargs kill)",
+      "Bash(node /Users/avifen/.agentsys/plugins/web-ctl/scripts/web-ctl.js run pdp-check goto \"http://localhost:8791/index.html\" --wait-loaded --no-snapshot)",
+      "Bash(python3 -m http.server 8792)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=/private/tmp/claude-501/-Users-jamescooper-Documents-GitHub-BemisExample/5a6cd083-a1eb-4dee-a418-5a4a2785c70c/scratchpad/pdp_resources_static.png --window-size=1400,6300 \"http://localhost:8792/index.html\")"
     ]
   }
 }

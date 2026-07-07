@@ -261,6 +261,9 @@ Add visual icons or small images to the product variation selector that distingu
 - The goal is to help customers identify the right size without reading extra copy  
 - Should not clutter the buy box — keep icons small and clean
 
+**Completed:**  
+Added small transparent WebP size icons for Elongated and Round in the PDP v2 variation selector. Removed measurement subtext, kept the selector uncluttered, and added shape-following drop shadows so the icons remain legible on the white active state.
+
 ---
 
 ### ✅ Task 15 — Product Page: Add Toggleable Coupon/Discount Checkbox
@@ -278,6 +281,9 @@ Add a checkbox inside the buy box that allows customers to apply a coupon or dis
 - The design should be visually appealing — much cleaner than the current live site version  
 - Spen described the current version as "pretty standard and corporate"
 
+**Design Completed:**  
+Redesigned the buy box coupon/discount element as a clean card with an icon, "Discount available" title/description, and a custom animated toggle switch — replacing the plain checkbox and helper text from the live site. Per-listing show/hide control and real checkout discount logic are Shopify editor work, tracked in `Shopify_Todo.md`.
+
 ---
 
 ### ✅ Task 16 — Product Page: Add "Write a Review" Button Near Star Rating
@@ -294,6 +300,9 @@ Add a clearly visible "Write a Review" button near the star rating display in th
 - Placement should be near (or directly adjacent to) the star rating summary  
 - The button should stand out enough to be noticed without dominating the buy box
 
+**Design Completed:**  
+Added a "Write a Review" pill button next to the star rating/review count in the PDP v2 configurator header, separated by a small divider. The button is visually distinct but compact so it doesn't dominate the buy box. It's currently inert (no click behavior) — wiring it to the real review-submission flow is tracked in `Shopify_Todo.md`.
+
 ---
 
 ### ✅ Task 17 — Product Page: Clickable Text Updates Main Product Image (Wish-List)
@@ -309,6 +318,12 @@ When a user clicks on specific feature or spec text further down the product pag
 - This is explicitly a **wish-list item** — do not prioritize over must-haves  
 - James responded positively ("Yeah, it's good") when this was raised  
 - Implementation would require connecting product copy/features to specific image variants
+
+**Needs Clarification:**  
+- Which specific feature/spec text blocks further down the page should be clickable — all of them, or a select few?  
+- Does a distinct product image/variant already exist for each feature callout, or would new photography/renders need to be sourced?  
+- Should the main image update in place (crossfade), or should the page also scroll back up to the above-the-fold gallery when clicked?  
+- Given this is explicitly wish-list, where does it fall in priority relative to other Nice to Have items (e.g. Task 5)?
 
 ---
 
@@ -327,6 +342,9 @@ Add a collapsible accordion at the bottom of the product page that contains the 
 - This is already how the current live site handles reviews (carousel nested in a section)  
 - Place this BELOW the highlighted standout review cards (which stay visible and uncollapsed)
 
+**Shopify Todo:**  
+Deferred to Shopify/theme implementation — depends on the live Bazaarvoice embed/credentials rather than static markup. Tracked in `Shopify_Todo.md`.
+
 ---
 
 ### ✅ Task 19 — Product Page: Add "Product Resources" Accordion at Bottom
@@ -344,6 +362,9 @@ Add a collapsible "Product Resources" accordion at the bottom of each product pa
 - Policy information (returns, etc.) is already in the footer — no need to duplicate it here  
 - Goal: make informational content accessible for customer service purposes without cluttering the main design  
 - James confirmed: "That's easy"
+
+**Design Completed:**  
+Combined the live site's four separate accordions (Product Resources, Measurements, Warranty, Shipping & Returns) into a single static "Product Resources" section in PDP v2, placed below the customer reviews section — content (installation manual link, measurements, warranty details) is always visible rather than collapsed behind a toggle. Shipping & Returns was intentionally left out since it's already covered in the footer. Styled as a 3-card grid with icon chips, matching the "From Our Customers" section's header and card treatment, with the same scroll-reveal entrance animation used throughout the page.
 
 ---
 
