@@ -213,3 +213,10 @@ if (glossarySearch && glossaryCards.length) {
     });
 }
 
+// ============================================================
+// INITIALIZE LUCIDE ICONS
+// ============================================================
+if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+}
+
